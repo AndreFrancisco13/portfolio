@@ -3,6 +3,8 @@ import projects from '../data/projects.json'
 import SectionDivider from '../components/SectionDivider'
 import ProjectCard from '../components/ProjectCard'
 import './Home.css'
+import heroImage from '../assets/images/hero.jpg'
+import profilePhoto from '../assets/images/foto.png'
 
 export default function Home() {
   return (
@@ -12,7 +14,7 @@ export default function Home() {
         <div className="hero-left">
           <p className="hero-overline">{profile.role}</p>
           <h1 className="hero-name">
-            André<br /><em>Francisco</em>
+            André<br />Francisco
           </h1>
           <p className="hero-bio">{profile.bio}</p>
           <a href="#work" className="hero-cta" onClick={(e) => {
@@ -22,8 +24,8 @@ export default function Home() {
             Ver trabalho
           </a>
         </div>
-        <div className="hero-right">
-          <div className="hero-bg-text">AF</div>
+        <div className="hero-right" style={{ backgroundImage: `url(${heroImage})` }}>
+          <div className="hero-bg-text"></div>
           <div className="hero-right-inner">
             <div className="hero-tools">
               <p className="hero-tools-label">Meios &amp; ferramentas</p>
@@ -61,16 +63,8 @@ export default function Home() {
           {profile.aboutTexts.map((text, i) => (
             <p key={i} className="about-text">{text}</p>
           ))}
-          <div className="about-stat-row">
-            {profile.stats.map((stat) => (
-              <div key={stat.label} className="stat">
-                <span className="stat-num">{stat.number}</span>
-                <span className="stat-label">{stat.label}</span>
-              </div>
-            ))}
-          </div>
         </div>
-        <div className="about-right">
+        <div className="about-right" style={{ backgroundImage: `url(${profilePhoto})` }}>
           <p className="about-quote">"{profile.quote}"</p>
           <span className="about-quote-attr">{profile.name}</span>
         </div>
@@ -81,8 +75,7 @@ export default function Home() {
       {/* CONTACT */}
       <section className="contact-section" id="contact">
         <div className="contact-left">
-          <p className="contact-eyebrow">Vamos trabalhar juntos</p>
-          <h2 className="contact-title">Tem um<br />projeto?</h2>
+          <p className="contact-eyebrow">Vamos trabalhar juntos?</p>
           <a href={`mailto:${profile.email}`} className="contact-email">
             {profile.email}
           </a>

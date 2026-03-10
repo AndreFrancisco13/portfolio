@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import './Navbar.css'
+import logo from '../assets/images/logo.png'
 
 export default function Navbar() {
   const location = useLocation()
@@ -16,7 +17,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <Link to="/" className="nav-logo">
-        André <span>Francisco</span>
+        <img src={logo} alt="Andre Francisco" />
       </Link>
       <div className="nav-right">
         <ul className="nav-links">

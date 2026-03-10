@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import './ProjectCard.css'
+import { resolveProjectImage } from '../utils/projectImages'
 
 export default function ProjectCard({ project, index }) {
   const delays = [0.1, 0.25, 0.4, 0.55, 0.7, 0.85]
+  const coverImage = resolveProjectImage(project.detail?.images?.[0])
 
   return (
     <Link
@@ -11,7 +13,11 @@ export default function ProjectCard({ project, index }) {
       style={{ animationDelay: `${delays[index] || 0.1}s` }}
     >
       <div className="project-image" style={{ background: project.cardBg }}>
-        <div className="project-image-placeholder">{project.number}</div>
+        {coverImage ? (
+          <img src={coverImage} alt={project.title} className="project-image-media" loading="lazy" />
+        ) : (
+          <div className="project-image-placeholder">{project.number}</div>
+        )}
       </div>
       <div className="project-body">
         <p className="project-season">{project.season}</p>

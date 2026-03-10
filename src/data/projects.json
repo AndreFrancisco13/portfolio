@@ -1,161 +1,253 @@
 [
   {
-    "id": "retratos-de-lisboa",
+    "id": "chronos",
     "number": "I",
-    "season": "Outono, 2024",
-    "title": "Retratos de Lisboa",
-    "description": "Série fotográfica em filme 35mm sobre a luz da cidade ao entardecer. Silhuetas, sombras e texturas da calçada.",
-    "tags": ["Fotografia", "Filme", "Urbano"],
+    "season": "2023",
+    "title": "Chronos",
+    "description": "Chronos portrays the evolution of the solar system, from the Big Bang to human space exploration, as an interactive educational timeline.",
+    "tags": ["JavaScript", "Interactive", "SPA"],
     "cardBg": "#D4C4A8",
     "detail": {
-      "subtitle": "A luz suspensa de Lisboa",
-      "fullDescription": "Um projeto pessoal que explora a relação entre a luz natural de Lisboa e as suas superfícies. Fotografado inteiramente em filme 35mm ao longo de três meses, entre setembro e novembro de 2024. Cada imagem procura capturar o momento em que a luz do entardecer transforma a cidade — silhuetas nos elétricos, sombras nas calçadas, texturas nas fachadas de azulejo.",
+      "subtitle": "Interactive history of the solar system",
+      "fullDescription": "Chronos is an interactive platform that presents key milestones in the history of the solar system in a visual, educational and immersive way.",
       "process": [
-        "Pesquisa e reconhecimento de locais durante diferentes horas do dia, mapeando a incidência de luz em ruas, praças e miradouros.",
-        "Seleção de filme — Kodak Portra 400 para tons quentes e Ilford HP5 para contraste em preto e branco.",
-        "Sessões fotográficas ao longo de 3 meses, sempre entre as 16h e as 19h para capturar a golden hour.",
-        "Revelação manual em laboratório e digitalização em scanner de alta resolução.",
-        "Edição e sequenciação final — seleção de 24 imagens a partir de mais de 400 fotografias."
+        "JavaScript was used to build interactive animations and animated scrolling, including dynamic size transitions and light/dark state changes.",
+        "Figma supported the design and prototyping of the visual narrative and animated scenes.",
+        "Bootstrap was used to ensure responsive layouts and consistency across devices."
       ],
       "images": [
-        "/images/projects/lisboa-01.jpg",
-        "/images/projects/lisboa-02.jpg",
-        "/images/projects/lisboa-03.jpg",
-        "/images/projects/lisboa-04.jpg",
-        "/images/projects/lisboa-05.jpg",
-        "/images/projects/lisboa-06.jpg"
+        "src/assets/images/projects/chronos/ChronosCover.png",
+        "src/assets/images/projects/chronos/chronos.jpg",
+        "src/assets/images/projects/chronos/chronos.png"
       ]
     }
   },
   {
-    "id": "studio-branco",
+    "id": "dashboard-rresearch",
     "number": "II",
-    "season": "Verão, 2024",
-    "title": "Identidade — Studio Branco",
-    "description": "Sistema de identidade visual para estúdio de arquitetura. Marca, tipografia e papelaria com caráter mineral e atemporal.",
-    "tags": ["Branding", "Identidade", "Print"],
+    "season": "2026",
+    "title": "Dashboard RResearch",
+    "description": "Dashboard orientado a analise de dados com foco em leitura rapida.",
+    "tags": ["Dashboard", "Data Viz", "UX/UI", "Hasura"],
     "cardBg": "#C8B89A",
     "detail": {
-      "subtitle": "Mineral, atemporal, arquitetónico",
-      "fullDescription": "Desenvolvimento completo de identidade visual para o Studio Branco, um atelier de arquitetura contemporânea em Aveiro. O conceito partiu da materialidade — betão, pedra, luz — traduzida em formas tipográficas limpas e uma paleta monocromática com apontamentos terrosos. O sistema inclui logótipo, tipografia institucional, papelaria completa e guidelines de aplicação.",
+      "subtitle": "Leitura de dados e decisao",
+      "fullDescription": "Projeto centrado em visualizacao e organizacao de informacao, com tres vistas principais no conjunto atual de imagens.",
       "process": [
-        "Briefing e imersão no universo do cliente — visitas ao atelier, análise de projetos de arquitetura, entrevistas com os sócios.",
-        "Moodboard e exploração conceptual — referências em materialidade, brutalismo suave e tipografia suíça.",
-        "Desenvolvimento do logótipo — 40+ iterações até à versão final com tipografia geométrica personalizada.",
-        "Design do sistema tipográfico e paleta cromática, com regras claras de hierarquia e aplicação.",
-        "Produção de papelaria — cartões de visita em papel texturado 350g com impressão letterpress, envelopes e pasta de projeto."
+        "Definicao dos indicadores e blocos de informacao.",
+        "Desenho da hierarquia visual do dashboard.",
+        "Ajustes de contraste, espacamento e legibilidade.",
+        "Implementacao dos componentes e funcionalidades com queries à base de dados da hasura."
       ],
       "images": [
-        "/images/projects/branco-01.jpg",
-        "/images/projects/branco-02.jpg",
-        "/images/projects/branco-03.jpg",
-        "/images/projects/branco-04.jpg"
+        "src/assets/images/projects/dashboard_rresearch/dash1.png",
+        "src/assets/images/projects/dashboard_rresearch/dash2.png",
+        "src/assets/images/projects/dashboard_rresearch/dash3.png"
       ]
     }
   },
   {
-    "id": "site-aurora",
+    "id": "design-sprint",
     "number": "III",
-    "season": "Primavera, 2024",
-    "title": "Website — Aurora Wellness",
-    "description": "Design e desenvolvimento de website para clínica de bem-estar. Interface serena com animações fluidas e reserva online.",
-    "tags": ["Web Design", "Desenvolvimento", "UI/UX"],
+    "season": "2024",
+    "title": "Design Sprint",
+    "description": "Processo completo de sprint: pesquisa, ideacao, prototipo e testes.",
+    "tags": ["Design Sprint", "UX", "Prototipagem"],
     "cardBg": "#BFAA8A",
     "detail": {
-      "subtitle": "Uma experiência digital de calma",
-      "fullDescription": "Projeto de web design e desenvolvimento para a Aurora Wellness, uma clínica de bem-estar e yoga no Porto. O desafio foi traduzir a sensação de tranquilidade do espaço físico para o digital — com navegação intuitiva, animações suaves e um sistema de reserva de aulas integrado. Desenvolvido em React com atenção especial à performance e acessibilidade.",
+      "subtitle": "Do problema ao prototipo",
+      "fullDescription": "Colecao de artefactos de sprint incluindo entrevistas, user journey, sketching, prototipos e validacao.",
       "process": [
-        "Workshop de descoberta com a equipa da Aurora — entender a marca, os serviços e o público-alvo.",
-        "Wireframes e prototipagem em Figma, com testes de usabilidade junto a clientes reais da clínica.",
-        "Design visual — paleta inspirada em tons naturais, tipografia humanista e espaços generosos de respiração.",
-        "Desenvolvimento front-end em React com animações de scroll e transições de página suaves.",
-        "Integração do sistema de reservas e otimização para mobile, com testes em múltiplos dispositivos."
+        "Mapeamento do problema e formulacao de How Might We.",
+        "Sintese da pesquisa com user journey e insights.",
+        "Criacao de prototipos low fidelity.",
+        "Iteracao com base em testes e feedback.",
+        "Criação de prototipos high fidelity"
       ],
       "images": [
-        "/images/projects/aurora-01.jpg",
-        "/images/projects/aurora-02.jpg",
-        "/images/projects/aurora-03.jpg",
-        "/images/projects/aurora-04.jpg",
-        "/images/projects/aurora-05.jpg"
+        "src/assets/images/projects/design_sprint/coverBlog2.png",
+        "src/assets/images/projects/design_sprint/howMightWe.png",
+        "src/assets/images/projects/design_sprint/planeamento.png",
+        "src/assets/images/projects/design_sprint/prototipoHi.png",
+        "src/assets/images/projects/design_sprint/prototipoLo.png",
+        "src/assets/images/projects/design_sprint/sketch.png",
+        "src/assets/images/projects/design_sprint/userJourney.png",
+        "src/assets/images/projects/design_sprint/vitoria.jpg"
       ]
     }
   },
   {
-    "id": "motion-ciclo-cinema",
+    "id": "framed-story",
     "number": "IV",
-    "season": "Inverno, 2023",
-    "title": "Motion — Ciclo de Cinema",
-    "description": "Série de animações e cartazes animados para ciclo de cinema mudo. Composição com colagem, tipografia cinética e texturas analógicas.",
-    "tags": ["Animação", "Motion", "Cartaz"],
+    "season": "2026",
+    "title": "Framed Story",
+    "description": "Experiencia digital com versoes desktop e mobile.",
+    "tags": ["UI/UX", "Responsive", "React", "GSAP", "frammer-motion"],
     "cardBg": "#CAB99E",
     "detail": {
-      "subtitle": "Movimento que nasce do silêncio",
-      "fullDescription": "Criação de uma série de peças de motion design para a divulgação de um ciclo de cinema mudo organizado pelo Cineclube de Aveiro. Cada cartaz animado é inspirado num filme do programa — usando colagem digital, tipografia cinética e texturas de película degradada. As animações foram pensadas para redes sociais e projeção em sala.",
+      "subtitle": "Narrativa visual do portfolio fotográfico",
+      "fullDescription": "Projeto com foco em composicao visual, com um portfolio fotografico executado até ao presente momento",
       "process": [
-        "Visionamento dos filmes do ciclo e pesquisa visual — expressionismo alemão, cinema soviético, slapstick americano.",
-        "Desenvolvimento do conceito visual — fusão entre estética de película antiga e motion design contemporâneo.",
-        "Criação de assets — digitalização de texturas em papel, recortes de jornal e fragmentos tipográficos.",
-        "Animação em After Effects — tipografia cinética, transições com grain e flicker, loops para redes sociais.",
-        "Adaptação para diferentes formatos — stories, posts quadrados, projeção horizontal em sala de cinema."
+        "Definicao da narrativa e estrutura de conteudo.",
+        "Design dos layouts principais para desktop.",
+        "Adaptacao para mobile com foco em usabilidade.",
+        "Implementação do design com React."
       ],
       "images": [
-        "/images/projects/cinema-01.jpg",
-        "/images/projects/cinema-02.jpg",
-        "/images/projects/cinema-03.jpg",
-        "/images/projects/cinema-04.jpg"
-      ]
+        "src/assets/images/projects/framed_story/framed_desktop.png",
+        "src/assets/images/projects/framed_story/framed_mobile.png"
+      ],
+      "link" : "https://www.framed-story.pt"
     }
   },
   {
-    "id": "ceramica-muda",
+    "id": "oposti",
     "number": "V",
-    "season": "Outono, 2023",
-    "title": "Catálogo — Cerâmica Muda",
-    "description": "Fotografia de produto e direção editorial para marca de cerâmica artesanal. Luz natural, fundos terrosos.",
-    "tags": ["Fotografia", "Produto", "Editorial"],
+    "season": "2022",
+    "title": "Opposti",
+    "description": "High-fidelity prototype in Affinity Design for a modern cafe and ice cream shop, extending the in-store experience into digital ordering and workshop booking.",
+    "tags": ["Produto Digital", "Brand", "UI"],
     "cardBg": "#D2C5AE",
     "detail": {
-      "subtitle": "A beleza do feito à mão",
-      "fullDescription": "Projeto de fotografia de produto e design editorial para a Cerâmica Muda, uma marca artesanal de cerâmica do Alentejo. O catálogo foi pensado como um objeto em si — papel texturado, impressão a duas tintas e fotografia que valoriza as imperfeições naturais de cada peça. Toda a fotografia foi feita com luz natural no atelier da ceramista.",
+      "subtitle": "Digital extension of a cafe experience",
+      "fullDescription": "The platform was designed to support online orders and workshop registrations while preserving the character of the physical space through a clean and intuitive interface.",
       "process": [
-        "Visita ao atelier — compreensão do processo cerâmico, seleção de peças e definição do tom editorial.",
-        "Sessão fotográfica de 3 dias no atelier, usando apenas luz natural e fundos de materiais naturais — linho, barro seco, madeira.",
-        "Tratamento fotográfico focado em manter a fidelidade das cores e texturas do barro.",
-        "Design editorial do catálogo — grid clássico de 12 colunas, tipografia serifada e espaços de respiro generosos.",
-        "Acompanhamento de produção gráfica — escolha de papel Munken Lynx 150g e impressão offset a duas cores."
+        "Online ordering flow lets users browse the menu and order coffee and ice cream quickly.",
+        "Workshop registration allows users to enroll in in-house coffee and culinary workshops.",
+        "The UI was designed for clear navigation and frictionless actions from discovery to checkout."
       ],
       "images": [
-        "/images/projects/ceramica-01.jpg",
-        "/images/projects/ceramica-02.jpg",
-        "/images/projects/ceramica-03.jpg",
-        "/images/projects/ceramica-04.jpg",
-        "/images/projects/ceramica-05.jpg"
+        "src/assets/images/projects/oposti/OpostiCover.png",
+        "src/assets/images/projects/oposti/OpostiIphone.png",
+        "src/assets/images/projects/oposti/oposti.jpg"
       ]
     }
   },
   {
-    "id": "portfolio-mariana",
+    "id": "pedro-henrique",
     "number": "VI",
-    "season": "Verão, 2023",
-    "title": "Website — Portfolio Mariana Soares",
-    "description": "Design e desenvolvimento de portfolio online para ilustradora. Layout editorial com galerias dinâmicas e animações de scroll.",
-    "tags": ["Web Design", "Desenvolvimento", "Portfolio"],
+    "season": "2025",
+    "title": "Pedro Henrique",
+    "description": "Projeto visual com exploracao desktop e mobile de um site de arquitetura.",
+    "tags": ["Web", "JavaScript", "Responsive", "tailwind"],
     "cardBg": "#C0AF97",
     "detail": {
-      "subtitle": "Um portfolio que respira ilustração",
-      "fullDescription": "Criação de portfolio digital para a ilustradora Mariana Soares. O objetivo era criar um espaço online que funcionasse como uma extensão do seu trabalho — editorial, orgânico e visualmente rico. O site apresenta as suas ilustrações em galerias dinâmicas com transições suaves, navegação por projetos e uma secção de loja integrada para prints.",
+      "subtitle": "Layouts e iteracoes do projeto",
+      "fullDescription": "Implementação de um layout para o site de arquitetura, com foco em responsividade e usabilidade.",
       "process": [
-        "Reuniões com a Mariana para entender o seu universo visual e as necessidades do portfolio — organização por projetos, loja de prints, contacto.",
-        "Moodboard e wireframes — inspiração em revistas de arte e galerias online minimalistas.",
-        "Design em Figma com sistema de componentes reutilizáveis e variantes para diferentes estados.",
-        "Desenvolvimento front-end com React e animações de scroll usando Intersection Observer.",
-        "Deploy e configuração de domínio personalizado, com otimização de imagens para carregamento rápido."
+        "Organizacao dos requisitos e referencias visuais.",
+        "Adaptacao mobile com foco em continuidade.",
+        "Implementacao dos componentes e funcionalidades com dados estaticos"
       ],
       "images": [
-        "/images/projects/mariana-01.jpg",
-        "/images/projects/mariana-02.jpg",
-        "/images/projects/mariana-03.jpg",
-        "/images/projects/mariana-04.jpg"
+        "src/assets/images/projects/pedro_henrique/pedro_henrique_2.jpeg",
+        "src/assets/images/projects/pedro_henrique/pedro_henrique_3.png",
+        "src/assets/images/projects/pedro_henrique/pedro_henrique_mobile.png",
+        "src/assets/images/projects/pedro_henrique/pedro_henrique_mobile_2.png",
+        "src/assets/images/projects/pedro_henrique/pedro_henrique_mobile_3.png"
+      ]
+    }
+  },
+  {
+    "id": "planetarium-pursuit",
+    "number": "VII",
+    "season": "2023",
+    "title": "Planetarium Pursuit",
+    "description": "Interactive narrative platform commissioned by Planetario do Porto for creating and publishing story-driven educational scenarios.",
+    "tags": ["UX/UI", "Gamificacao", "Visual", "PHP", "MySQL", "JavaScript"],
+    "cardBg": "#BCA98D",
+    "detail": {
+      "subtitle": "Storytelling and educational interaction",
+      "fullDescription": "Administrators can build narrative scenarios with characters, objects and backgrounds, creating game-like educational experiences for visitors.",
+      "process": [
+        "PHP manages scenario creation, user interactions and dynamic content rendering.",
+        "MySQL stores stories, assets and metadata for fast retrieval during interaction.",
+        "JavaScript supports front-end interactions such as drag-and-drop and object placement."
+      ],
+      "images": [
+        "src/assets/images/projects/planetarium_pursuit/PlanetariumCover.png",
+        "src/assets/images/projects/planetarium_pursuit/PlanetariumFerramenta.png",
+        "src/assets/images/projects/planetarium_pursuit/PlanetariumPursuit.png",
+        "src/assets/images/projects/planetarium_pursuit/planetarium.jpg",
+        "src/assets/images/projects/planetarium_pursuit/planetariumMockup.png"
+      ]
+    }
+  },
+  {
+    "id": "sara",
+    "number": "VIII",
+    "season": "2025",
+    "title": "SARA",
+    "description": "User-centered platform to simplify audiovisual equipment requisition for students and faculty and inventory workflows for administrators.",
+    "tags": ["UX Research", "UX", "Testes", "Laravel", "MySQL", "React", "tailwind"],
+    "cardBg": "#D1C3AD",
+    "detail": {
+      "subtitle": "Equipment requisition with user-centered design",
+      "fullDescription": "The project combined UX research and iterative prototyping to reduce friction in request, approval and inventory management flows within a university context.",
+      "process": [
+        "User-centered design focused on intuitive flows for students, teachers and SARA staff.",
+        "Design thinking guided research, prototyping and iteration based on stakeholder feedback.",
+        "Laravel provided a secure and scalable foundation with authentication, authorization and data management.",
+        "implementation with react and tailwind para uma interface responsiva e moderna, com foco em usabilidade e clareza de informação."
+      ],
+      "images": [
+        "src/assets/images/projects/sara/saraCover.png",
+        "src/assets/images/projects/sara/baseDados.png",
+        "src/assets/images/projects/sara/cardSorting.png",
+        "src/assets/images/projects/sara/empathySara.png",
+        "src/assets/images/projects/sara/entrevistaSara.png",
+        "src/assets/images/projects/sara/ideate.png",
+        "src/assets/images/projects/sara/sara.png",
+        "src/assets/images/projects/sara/sara2.jpg",
+        "src/assets/images/projects/sara/testesSara.png",
+        "src/assets/images/projects/sara/userStories.png"
+      ]
+    }
+  },
+  {
+    "id": "ser-mais",
+    "number": "IX",
+    "season": "2025",
+    "title": "Ser+",
+    "description": "Projeto Ser Mais com foco na divulgação das atividades que ocorrem na univerdidade de aveiro fora do contexto das aulas",
+    "tags": [ "UI-UX", "UX Research"],
+    "cardBg": "#C7B59C",
+    "detail": {
+      "subtitle": "Direcao visual e conceito da marca",
+      "fullDescription": "Projeto de direcao visual e conceito para a marca Ser+, com foco na comunicacao das atividades culturais e de lazer da universidade de aveiro, com reconhecimento de quem nelas participa.",
+      "process": [
+        "Analise de contexto e objetivos dos stakeholders.",
+        "Construcao do conceito da aplicação",
+        "Aplicacao do conceito em formato digital.",
+        "Criação de prototipos de alta fidelidade",
+        "Investigação junto dos utilizadores"
+      ],
+      "images": [
+        "src/assets/images/projects/ser_mais/ser+.png"
+      ]
+    }
+  },
+  {
+    "id": "top-indian-movies",
+    "number": "X",
+    "season": "2025",
+    "title": "Top Indian Movies",
+    "description": "Movie database platform inspired by IMDb, built with PHP and MySQL, with ratings, favorites and admin management tools.",
+    "tags": ["Web App", "PHP", "MySQL", "JavaScript"],
+    "cardBg": "#B9A487",
+    "detail": {
+      "subtitle": "Movie discovery, ratings and administration",
+      "fullDescription": "The platform allows users to explore movies, manage favorite lists and rate titles, while administrators maintain users, movies and genres.",
+      "process": [
+        "PHP and MySQL power search and retrieval of detailed movie records.",
+        "Users can save favorites and ratings through database-backed interactions.",
+        "Admin roles manage users, movies and genres with secured authorization flows."
+      ],
+      "images": [
+        "src/assets/images/projects/top_indian_movies/TopIndianCover.png",
+        "src/assets/images/projects/top_indian_movies/topIndian.jpg",
+        "src/assets/images/projects/top_indian_movies/topIndianAdmin.png",
+        "src/assets/images/projects/top_indian_movies/topIndianMovies.png"
       ]
     }
   }

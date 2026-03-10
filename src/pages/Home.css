@@ -79,8 +79,17 @@
   position: relative;
   overflow: hidden;
   background: var(--parchment-dark);
+  background-size: cover;
+  background-position: center;
   opacity: 0;
   animation: fadeIn 1.4s ease 0.5s forwards;
+}
+
+.hero-right::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(21, 17, 14, 0.7) 10%, rgba(21, 17, 14, 0.3) 70%);
 }
 
 .hero-right-inner {
@@ -107,6 +116,7 @@
   user-select: none;
   letter-spacing: -0.04em;
   opacity: 0.55;
+  z-index: 1;
 }
 
 .hero-tools {
@@ -182,14 +192,26 @@
 }
 
 .about-right {
+  position: relative;
   padding: 6rem 3.5rem;
   background: var(--parchment-dark);
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+.about-right::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(27, 22, 19, 0.72) 10%, rgba(27, 22, 19, 0.5) 100%);
+}
+
 .about-quote {
+  position: relative;
+  z-index: 1;
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   font-style: italic;
@@ -200,6 +222,8 @@
 }
 
 .about-quote-attr {
+  position: relative;
+  z-index: 1;
   font-size: 0.68rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -322,4 +346,85 @@
 
 .social-link:hover {
   color: var(--terracotta);
+}
+
+@media (max-width: 1080px) {
+  .hero,
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left,
+  .about-left {
+    border-right: none;
+    border-bottom: 1px solid var(--warm-gray);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .contact-left {
+    max-width: 100%;
+  }
+
+  .contact-right,
+  .social-links {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-left,
+  .hero-right-inner,
+  .work-section,
+  .about-left,
+  .about-right,
+  .contact-section,
+  .section-header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-left,
+  .about-left,
+  .about-right,
+  .contact-section,
+  .work-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-bg-text {
+    font-size: clamp(6rem, 23vw, 8rem);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-bio,
+  .about-text {
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+
+  .about-quote {
+    font-size: 1.5rem;
+    line-height: 1.35;
+  }
 }

@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom'
 import projects from '../data/projects.json'
+import { resolveProjectImage } from '../utils/projectImages'
 import './ProjectDetail.css'
 
 export default function ProjectDetail() {
@@ -18,6 +19,7 @@ export default function ProjectDetail() {
   const currentIndex = projects.indexOf(project)
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null
   const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null
+  const heroImage = resolveProjectImage(project.detail?.images?.[0])
 
   return (
     <div className="detail-page">
@@ -34,7 +36,11 @@ export default function ProjectDetail() {
           </div>
         </div>
         <div className="detail-hero-right">
-          <div className="detail-hero-number">{project.number}</div>
+          {heroImage ? (
+            <img src={heroImage} alt={project.title} className="detail-hero-cover" />
+          ) : (
+            <div className="detail-hero-number">{project.number}</div>
+          )}
         </div>
       </section>
 
@@ -84,10 +90,12 @@ export default function ProjectDetail() {
         <div className="gallery-grid">
           {project.detail.images.map((img, i) => (
             <div key={i} className="gallery-item" style={{ background: project.cardBg }}>
-              <div className="gallery-placeholder">
-                <span className="gallery-placeholder-num">{String(i + 1).padStart(2, '0')}</span>
-                <span className="gallery-placeholder-label">Imagem</span>
-              </div>
+              <img
+                src={resolveProjectImage(img)}
+                alt={`${project.title} ${String(i + 1).padStart(2, '0')}`}
+                className="gallery-image"
+                loading="lazy"
+              />
             </div>
           ))}
         </div>

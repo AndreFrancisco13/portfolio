@@ -13,11 +13,19 @@
 }
 
 .nav-logo {
+  display: inline-flex;
+  align-items: center;
   font-family: 'Courier Prime', monospace;
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--ink);
+}
+
+.nav-logo img {
+  display: block;
+  width: 200px;
+  height: auto;
 }
 
 .nav-logo span {
@@ -68,4 +76,49 @@
   box-shadow: 5px 5px 0px var(--terracotta);
   border-color: var(--terracotta);
   color: var(--terracotta);
+}
+
+@media (max-width: 1060px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-logo img {
+    width: 150px;
+  }
+
+  .nav-right {
+    gap: 1.2rem;
+  }
+
+  .nav-links {
+    gap: 1.3rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-cta {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    padding: 0.45rem 0.7rem;
+    box-shadow: 2px 2px 0px var(--ink);
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar {
+    padding: 0.85rem 0.9rem;
+  }
+
+  .nav-logo img {
+    width: 120px;
+  }
+
+  .nav-cta {
+    border-width: 1.5px;
+  }
 }
