@@ -64,10 +64,10 @@ export default function Home() {
             <p key={i} className="about-text">{text}</p>
           ))}
         </div>
-        <div className="about-right" style={{ backgroundImage: `url(${profilePhoto})` }}>
+        <a href="https://www.framed-story.pt" target="_blank" rel="noopener noreferrer" className="about-right" style={{ backgroundImage: `url(${profilePhoto})` }}>
           <p className="about-quote">"{profile.quote}"</p>
           <span className="about-quote-attr">{profile.name}</span>
-        </div>
+        </a>
       </section>
 
       <SectionDivider label="Contacto" value="Disponível para projetos" />

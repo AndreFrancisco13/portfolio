@@ -228,8 +228,33 @@
     }
   },
   {
-    "id": "ser-mais",
+    "id": "betlearn",
     "number": "X",
+    "season": "2025",
+    "title": "BetLearn",
+    "description": "Aplicação mobile educativa que ensina os utilizadores a apostar de forma informada, simulando cenários reais do mundo desportivo.",
+    "tags": ["React Native", "UX/UI", "REST API", "Railway"],
+    "cardBg": "#C4B89E",
+    "detail": {
+      "subtitle": "Aprender a apostar com responsabilidade",
+      "fullDescription": "BetLearn é uma aplicação mobile que aproxima os utilizadores do universo das apostas desportivas de forma educativa, simulando cenários o mais próximos possível da realidade. O projeto passou por investigação, prototipagem lo-fi e hi-fi, testes de usabilidade para refinamento, e implementação final com React Native, API REST e base de dados alojada em Railway.",
+      "process": [
+        "Investigação inicial sobre o mercado de apostas e necessidades dos utilizadores.",
+        "Prototipagem low-fidelity para validação rápida de conceitos e fluxos.",
+        "Testes de usabilidade intermédios para identificar pontos de fricção.",
+        "Prototipagem high-fidelity com refinamento baseado nos resultados dos testes.",
+        "Implementação em React Native com criação de API REST e base de dados em Railway."
+      ],
+      "images": [
+        "src/assets/images/projects/betlearn/betlearncover.png",
+        "src/assets/images/projects/betlearn/betlearn.png",
+        "src/assets/images/projects/betlearn/betlearn_lo.png"
+      ]
+    }
+  },
+  {
+    "id": "ser-mais",
+    "number": "XI",
     "season": "2025",
     "title": "Ser+",
     "description": "Projeto Ser Mais com foco na divulgação das atividades que ocorrem na Universidade de Aveiro fora do contexto das aulas.",
