@@ -4,16 +4,16 @@
     "number": "I",
     "season": "2023",
     "title": "Chronos",
-    "description": "Chronos portrays the evolution of the solar system, from the Big Bang to human space exploration, as an interactive educational timeline.",
-    "tags": ["JavaScript", "Interactive", "SPA"],
+    "description": "Chronos retrata a evolução do sistema solar, desde o Big Bang até à exploração espacial humana, como uma linha temporal educativa e interativa.",
+    "tags": ["JavaScript", "Interativo", "SPA"],
     "cardBg": "#D4C4A8",
     "detail": {
-      "subtitle": "Interactive history of the solar system",
-      "fullDescription": "Chronos is an interactive platform that presents key milestones in the history of the solar system in a visual, educational and immersive way.",
+      "subtitle": "História interativa do sistema solar",
+      "fullDescription": "Chronos é uma plataforma interativa que apresenta marcos importantes da história do sistema solar de forma visual, educativa e imersiva.",
       "process": [
-        "JavaScript was used to build interactive animations and animated scrolling, including dynamic size transitions and light/dark state changes.",
-        "Figma supported the design and prototyping of the visual narrative and animated scenes.",
-        "Bootstrap was used to ensure responsive layouts and consistency across devices."
+        "JavaScript foi usado para construir animações interativas e scroll animado, incluindo transições dinâmicas de tamanho e mudanças entre estados claro/escuro.",
+        "Figma apoiou o design e prototipagem da narrativa visual e cenas animadas.",
+        "Bootstrap foi usado para garantir layouts responsivos e consistência entre dispositivos."
       ],
       "images": [
         "src/assets/images/projects/chronos/ChronosCover.png",
@@ -81,16 +81,16 @@
     "number": "IV",
     "season": "2026",
     "title": "Framed Story",
-    "description": "Experiencia digital com versoes desktop e mobile.",
-    "tags": ["UI/UX", "Responsive", "React", "GSAP", "frammer-motion"],
+    "description": "Experiência digital com versões desktop e mobile para apresentação de trabalho fotográfico.",
+    "tags": ["UI/UX", "Responsivo", "React", "GSAP", "framer-motion"],
     "cardBg": "#CAB99E",
     "detail": {
-      "subtitle": "Narrativa visual do portfolio fotográfico",
-      "fullDescription": "Projeto com foco em composicao visual, com um portfolio fotografico executado até ao presente momento",
+      "subtitle": "Narrativa visual do portfólio fotográfico",
+      "fullDescription": "Projeto com foco em composição visual, com um portfólio fotográfico executado até ao presente momento.",
       "process": [
-        "Definicao da narrativa e estrutura de conteudo.",
+        "Definição da narrativa e estrutura de conteúdo.",
         "Design dos layouts principais para desktop.",
-        "Adaptacao para mobile com foco em usabilidade.",
+        "Adaptação para mobile com foco em usabilidade.",
         "Implementação do design com React."
       ],
       "images": [
@@ -105,16 +105,16 @@
     "number": "V",
     "season": "2022",
     "title": "Opposti",
-    "description": "High-fidelity prototype in Affinity Design for a modern cafe and ice cream shop, extending the in-store experience into digital ordering and workshop booking.",
-    "tags": ["Produto Digital", "Brand", "UI"],
+    "description": "Protótipo de alta fidelidade em Affinity Design para um café e gelataria moderna, estendendo a experiência na loja para encomendas digitais e registo em workshops.",
+    "tags": ["Produto Digital", "Marca", "UI"],
     "cardBg": "#D2C5AE",
     "detail": {
-      "subtitle": "Digital extension of a cafe experience",
-      "fullDescription": "The platform was designed to support online orders and workshop registrations while preserving the character of the physical space through a clean and intuitive interface.",
+      "subtitle": "Extensão digital da experiência de café",
+      "fullDescription": "A plataforma foi desenhada para suportar encomendas online e registo em workshops, preservando o caráter do espaço físico através de uma interface limpa e intuitiva.",
       "process": [
-        "Online ordering flow lets users browse the menu and order coffee and ice cream quickly.",
-        "Workshop registration allows users to enroll in in-house coffee and culinary workshops.",
-        "The UI was designed for clear navigation and frictionless actions from discovery to checkout."
+        "Fluxo de encomendas online permite aos utilizadores navegar no menu e encomendar café e gelados rapidamente.",
+        "Registo em workshops permite aos utilizadores inscreverem-se em workshops de café e culinária presenciais.",
+        "A UI foi desenhada para navegação clara e ações sem fricção desde a descoberta até ao checkout."
       ],
       "images": [
         "src/assets/images/projects/oposti/OpostiCover.png",
@@ -128,23 +128,22 @@
     "number": "VI",
     "season": "2025",
     "title": "Pedro Henrique",
-    "description": "Projeto visual com exploracao desktop e mobile de um site de arquitetura.",
-    "tags": ["Web", "JavaScript", "Responsive", "tailwind"],
+    "description": "Projeto visual com exploração desktop e mobile de um site de arquitetura.",
+    "tags": ["Web", "JavaScript", "Responsivo", "Tailwind"],
     "cardBg": "#C0AF97",
     "detail": {
-      "subtitle": "Layouts e iteracoes do projeto",
+      "subtitle": "Layouts e iterações do projeto",
       "fullDescription": "Implementação de um layout para o site de arquitetura, com foco em responsividade e usabilidade.",
       "process": [
-        "Organizacao dos requisitos e referencias visuais.",
-        "Adaptacao mobile com foco em continuidade.",
-        "Implementacao dos componentes e funcionalidades com dados estaticos"
+        "Organização dos requisitos e referências visuais.",
+        "Adaptação mobile com foco em continuidade.",
+        "Implementação dos componentes e funcionalidades com dados estáticos."
       ],
       "images": [
+        "src/assets/images/projects/pedro_henrique/pedro_henrique–grande.png",
         "src/assets/images/projects/pedro_henrique/pedro_henrique_2.jpeg",
         "src/assets/images/projects/pedro_henrique/pedro_henrique_3.png",
-        "src/assets/images/projects/pedro_henrique/pedro_henrique_mobile.png",
-        "src/assets/images/projects/pedro_henrique/pedro_henrique_mobile_2.png",
-        "src/assets/images/projects/pedro_henrique/pedro_henrique_mobile_3.png"
+        "src/assets/images/projects/pedro_henrique/pedro_henrique_mobile.png"
       ]
     }
   },
@@ -153,16 +152,16 @@
     "number": "VII",
     "season": "2023",
     "title": "Planetarium Pursuit",
-    "description": "Interactive narrative platform commissioned by Planetario do Porto for creating and publishing story-driven educational scenarios.",
-    "tags": ["UX/UI", "Gamificacao", "Visual", "PHP", "MySQL", "JavaScript"],
+    "description": "Plataforma narrativa interativa comissionada pelo Planetário do Porto para criar e publicar cenários educativos baseados em histórias.",
+    "tags": ["UX/UI", "Gamificação", "Visual", "PHP", "MySQL", "JavaScript"],
     "cardBg": "#BCA98D",
     "detail": {
-      "subtitle": "Storytelling and educational interaction",
-      "fullDescription": "Administrators can build narrative scenarios with characters, objects and backgrounds, creating game-like educational experiences for visitors.",
+      "subtitle": "Storytelling e interação educativa",
+      "fullDescription": "Os administradores podem construir cenários narrativos com personagens, objetos e fundos, criando experiências educativas semelhantes a jogos para os visitantes.",
       "process": [
-        "PHP manages scenario creation, user interactions and dynamic content rendering.",
-        "MySQL stores stories, assets and metadata for fast retrieval during interaction.",
-        "JavaScript supports front-end interactions such as drag-and-drop and object placement."
+        "PHP gere a criação de cenários, interações dos utilizadores e renderização de conteúdo dinâmico.",
+        "MySQL armazena histórias, assets e metadados para recuperação rápida durante a interação.",
+        "JavaScript suporta interações front-end como arrastar-e-soltar e colocação de objetos."
       ],
       "images": [
         "src/assets/images/projects/planetarium_pursuit/PlanetariumCover.png",
@@ -178,17 +177,17 @@
     "number": "VIII",
     "season": "2025",
     "title": "SARA",
-    "description": "User-centered platform to simplify audiovisual equipment requisition for students and faculty and inventory workflows for administrators.",
-    "tags": ["UX Research", "UX", "Testes", "Laravel", "MySQL", "React", "tailwind"],
+    "description": "Plataforma centrada no utilizador para simplificar a requisição de equipamento audiovisual para estudantes e docentes, e fluxos de inventário para administradores.",
+    "tags": ["UX Research", "UX", "Testes", "Laravel", "MySQL", "React", "Tailwind"],
     "cardBg": "#D1C3AD",
     "detail": {
-      "subtitle": "Equipment requisition with user-centered design",
-      "fullDescription": "The project combined UX research and iterative prototyping to reduce friction in request, approval and inventory management flows within a university context.",
+      "subtitle": "Requisição de equipamento com design centrado no utilizador",
+      "fullDescription": "O projeto combinou pesquisa de UX e prototipagem iterativa para reduzir fricção nos fluxos de pedido, aprovação e gestão de inventário num contexto universitário.",
       "process": [
-        "User-centered design focused on intuitive flows for students, teachers and SARA staff.",
-        "Design thinking guided research, prototyping and iteration based on stakeholder feedback.",
-        "Laravel provided a secure and scalable foundation with authentication, authorization and data management.",
-        "implementation with react and tailwind para uma interface responsiva e moderna, com foco em usabilidade e clareza de informação."
+        "Design centrado no utilizador focado em fluxos intuitivos para estudantes, professores e equipa SARA.",
+        "Design thinking guiou pesquisa, prototipagem e iteração baseada em feedback dos stakeholders.",
+        "Laravel forneceu uma base segura e escalável com autenticação, autorização e gestão de dados.",
+        "Implementação com React e Tailwind para uma interface responsiva e moderna, com foco em usabilidade e clareza de informação."
       ],
       "images": [
         "src/assets/images/projects/sara/saraCover.png",
@@ -205,49 +204,49 @@
     }
   },
   {
-    "id": "ser-mais",
+    "id": "top-indian-movies",
     "number": "IX",
     "season": "2025",
-    "title": "Ser+",
-    "description": "Projeto Ser Mais com foco na divulgação das atividades que ocorrem na univerdidade de aveiro fora do contexto das aulas",
-    "tags": [ "UI-UX", "UX Research"],
-    "cardBg": "#C7B59C",
-    "detail": {
-      "subtitle": "Direcao visual e conceito da marca",
-      "fullDescription": "Projeto de direcao visual e conceito para a marca Ser+, com foco na comunicacao das atividades culturais e de lazer da universidade de aveiro, com reconhecimento de quem nelas participa.",
-      "process": [
-        "Analise de contexto e objetivos dos stakeholders.",
-        "Construcao do conceito da aplicação",
-        "Aplicacao do conceito em formato digital.",
-        "Criação de prototipos de alta fidelidade",
-        "Investigação junto dos utilizadores"
-      ],
-      "images": [
-        "src/assets/images/projects/ser_mais/ser+.png"
-      ]
-    }
-  },
-  {
-    "id": "top-indian-movies",
-    "number": "X",
-    "season": "2025",
     "title": "Top Indian Movies",
-    "description": "Movie database platform inspired by IMDb, built with PHP and MySQL, with ratings, favorites and admin management tools.",
+    "description": "Plataforma de base de dados de filmes inspirada no IMDb, construída com PHP e MySQL, com classificações, favoritos e ferramentas de gestão administrativa.",
     "tags": ["Web App", "PHP", "MySQL", "JavaScript"],
     "cardBg": "#B9A487",
     "detail": {
-      "subtitle": "Movie discovery, ratings and administration",
-      "fullDescription": "The platform allows users to explore movies, manage favorite lists and rate titles, while administrators maintain users, movies and genres.",
+      "subtitle": "Descoberta de filmes, classificações e administração",
+      "fullDescription": "A plataforma permite aos utilizadores explorar filmes, gerir listas de favoritos e classificar títulos, enquanto os administradores mantêm utilizadores, filmes e géneros.",
       "process": [
-        "PHP and MySQL power search and retrieval of detailed movie records.",
-        "Users can save favorites and ratings through database-backed interactions.",
-        "Admin roles manage users, movies and genres with secured authorization flows."
+        "PHP e MySQL alimentam pesquisa e recuperação de registos detalhados de filmes.",
+        "Os utilizadores podem guardar favoritos e classificações através de interações suportadas por base de dados.",
+        "Funções de administrador gerem utilizadores, filmes e géneros com fluxos de autorização seguros."
       ],
       "images": [
         "src/assets/images/projects/top_indian_movies/TopIndianCover.png",
         "src/assets/images/projects/top_indian_movies/topIndian.jpg",
         "src/assets/images/projects/top_indian_movies/topIndianAdmin.png",
         "src/assets/images/projects/top_indian_movies/topIndianMovies.png"
+      ]
+    }
+  },
+  {
+    "id": "ser-mais",
+    "number": "X",
+    "season": "2025",
+    "title": "Ser+",
+    "description": "Projeto Ser Mais com foco na divulgação das atividades que ocorrem na Universidade de Aveiro fora do contexto das aulas.",
+    "tags": ["UI/UX", "UX Research"],
+    "cardBg": "#C7B59C",
+    "detail": {
+      "subtitle": "Direção visual e conceito da marca",
+      "fullDescription": "Projeto de direção visual e conceito para a marca Ser+, com foco na comunicação das atividades culturais e de lazer da Universidade de Aveiro, com reconhecimento de quem nelas participa.",
+      "process": [
+        "Análise de contexto e objetivos dos stakeholders.",
+        "Construção do conceito da aplicação.",
+        "Aplicação do conceito em formato digital.",
+        "Criação de protótipos de alta fidelidade.",
+        "Investigação junto dos utilizadores."
+      ],
+      "images": [
+        "src/assets/images/projects/ser_mais/ser+.png"
       ]
     }
   }
