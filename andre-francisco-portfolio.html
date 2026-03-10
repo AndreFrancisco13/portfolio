@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>André Francisco — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --parchment: #F2EBD9;
+      --parchment-dark: #E8DEC8;
+      --ink: #1E1810;
+      --ink-soft: #3A2F22;
+      --dust: #A89880;
+      --terracotta: #8B4A2F;
+      --amber: #B87333;
+      --warm-gray: #C4B49A;
+      --sepia: #7A6145;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: 'Courier Prime', monospace;
+      font-size: 15px;
+      line-height: 1.7;
+      overflow-x: hidden;
+      cursor: crosshair;
+    }
+
+    /* GRAIN OVERLAY */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.045;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 3.5rem;
+      background: var(--parchment);
+      border-bottom: 1px solid var(--warm-gray);
+    }
+
+    .nav-logo {
+      font-family: 'Courier Prime', monospace;
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--terracotta); }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.8rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--terracotta); }
+
+    .nav-cta {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      border: 2px solid var(--ink);
+      padding: 0.55rem 1.2rem;
+      box-shadow: 3px 3px 0px var(--ink);
+      transition: box-shadow 0.2s, transform 0.2s, color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 5px 5px 0px var(--terracotta);
+      border-color: var(--terracotta);
+      color: var(--terracotta);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 80px;
+    }
+
+    .hero-left {
+      padding: 8rem 3.5rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid var(--warm-gray);
+      opacity: 0;
+      animation: fadeUp 1s ease 0.2s forwards;
+    }
+
+    .hero-overline {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 1.8rem;
+    }
+    .hero-overline::before {
+      content: '— ';
+    }
+
+    .hero-name {
+      font-family: 'Courier Prime', monospace;
+      font-size: clamp(3.5rem, 6.5vw, 7rem);
+      font-weight: 700;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 2.5rem;
+    }
+    .hero-name em {
+      font-style: italic;
+      color: var(--terracotta);
+    }
+
+    .hero-bio {
+      max-width: 38ch;
+      font-size: 0.9rem;
+      color: var(--sepia);
+      line-height: 1.85;
+      margin-bottom: 3.5rem;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 2px;
+      transition: color 0.3s, border-color 0.3s;
+      width: fit-content;
+    }
+    .hero-cta:hover {
+      color: var(--terracotta);
+      border-color: var(--terracotta);
+    }
+    .hero-cta::after { content: '↓'; }
+
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+      background: var(--parchment-dark);
+      opacity: 0;
+      animation: fadeIn 1.4s ease 0.5s forwards;
+    }
+
+    .hero-right-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 3rem;
+    }
+
+    /* large decorative background text */
+    .hero-bg-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(10rem, 18vw, 22rem);
+      font-weight: 900;
+      font-style: italic;
+      color: var(--parchment);
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: -0.04em;
+      opacity: 0.55;
+    }
+
+    .hero-tools {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-tools-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--dust);
+      margin-bottom: 1rem;
+    }
+
+    .tools-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .tool-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sepia);
+      border: 1px solid var(--warm-gray);
+      padding: 0.3rem 0.8rem;
+      background: transparent;
+    }
+
+    /* ── DIVIDER ── */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 0 3.5rem;
+      margin: 0;
+      border-top: 1px solid var(--warm-gray);
+      border-bottom: 1px solid var(--warm-gray);
+      height: 52px;
+    }
+    .divider-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--dust);
+      white-space: nowrap;
+    }
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: var(--warm-gray);
+      opacity: 0.5;
+    }
+    .divider-num {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.75rem;
+      color: var(--warm-gray);
+    }
+
+    /* ── WORK SECTION ── */
+    .work-section {
+      padding: 6rem 3.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-family: 'Courier Prime', monospace;
+      font-size: 2.5rem;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .section-note {
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dust);
+    }
+
+    /* PROJECT GRID */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid var(--ink);
+      background: var(--parchment);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
+      box-shadow: 4px 4px 0px var(--ink);
+    }
+    .project-card:nth-child(1) { animation-delay: 0.1s; }
+    .project-card:nth-child(2) { animation-delay: 0.25s; }
+    .project-card:nth-child(3) { animation-delay: 0.4s; }
+    .project-card:nth-child(4) { animation-delay: 0.55s; }
+    .project-card:nth-child(5) { animation-delay: 0.7s; }
+    .project-card:nth-child(6) { animation-delay: 0.85s; }
+
+    .project-card:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 7px 7px 0px var(--terracotta);
+    }
+
+    .project-image {
+      width: 100%;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      position: relative;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .project-image-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Courier Prime', monospace;
+      font-size: 4rem;
+      font-style: normal;
+      font-weight: 700;
+      color: var(--warm-gray);
+      transition: color 0.3s;
+    }
+    .project-card:hover .project-image-placeholder {
+      color: var(--sepia);
+    }
+
+    /* Colored placeholder blocks per card */
+    .card-bg-1 { background: #D4C4A8; }
+    .card-bg-2 { background: #C8B89A; }
+    .card-bg-3 { background: #BFAA8A; }
+    .card-bg-4 { background: #CAB99E; }
+    .card-bg-5 { background: #D2C5AE; }
+    .card-bg-6 { background: #C0AF97; }
+
+    .project-body {
+      padding: 1.5rem 1.6rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.9rem;
+    }
+
+    .project-title {
+      font-family: 'Courier Prime', monospace;
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--ink);
+      flex: 1;
+      padding-right: 0.8rem;
+    }
+
+    .project-actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-shrink: 0;
+      padding-top: 0.1rem;
+    }
+
+    .project-btn {
+      width: 30px;
+      height: 30px;
+      border: 1.5px solid var(--ink);
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 0.75rem;
+      color: var(--ink);
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .project-btn:hover {
+      background: var(--ink);
+      color: var(--parchment);
+    }
+
+    .project-season {
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 0.7rem;
+    }
+
+    .project-desc {
+      font-size: 0.8rem;
+      color: var(--sepia);
+      line-height: 1.78;
+      margin-bottom: 1.4rem;
+      flex: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: auto;
+    }
+    .project-tag {
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      border: 1.5px solid var(--ink-soft);
+      padding: 0.25rem 0.7rem;
+      background: transparent;
+      transition: background 0.2s, color 0.2s;
+    }
+    .project-card:hover .project-tag {
+      border-color: var(--terracotta);
+      color: var(--terracotta);
+    }
+
+    /* ── ABOUT ── */
+    .about-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--warm-gray);
+    }
+
+    .about-left {
+      padding: 6rem 3.5rem;
+      border-right: 1px solid var(--warm-gray);
+    }
+
+    .about-right {
+      padding: 6rem 3.5rem;
+      background: var(--parchment-dark);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.45;
+      color: var(--ink-soft);
+      margin-bottom: 2rem;
+    }
+
+    .about-quote-attr {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--dust);
+    }
+    .about-quote-attr::before { content: '— '; }
+
+    .about-title {
+      font-family: 'Courier Prime', monospace;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .about-text {
+      font-size: 0.88rem;
+      color: var(--sepia);
+      line-height: 1.9;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--warm-gray);
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .stat-num {
+      font-family: 'Courier Prime', monospace;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--dust);
+    }
+
+    /* ── CONTACT ── */
+    .contact-section {
+      border-top: 1px solid var(--warm-gray);
+      padding: 6rem 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .contact-left { max-width: 50%; }
+
+    .contact-eyebrow {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 1.5rem;
+    }
+    .contact-eyebrow::before { content: '— '; }
+
+    .contact-title {
+      font-family: 'Courier Prime', monospace;
+      font-size: clamp(2.2rem, 4.5vw, 4rem);
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-email {
+      font-family: 'Courier Prime', monospace;
+      font-size: 1.1rem;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 2px;
+      transition: color 0.3s, border-color 0.3s;
+    }
+    .contact-email:hover {
+      color: var(--terracotta);
+      border-color: var(--terracotta);
+    }
+
+    .contact-right {
+      text-align: right;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      align-items: flex-end;
+    }
+    .social-link {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sepia);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .social-link:hover { color: var(--terracotta); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--warm-gray);
+      padding: 1.5rem 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-copy {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dust);
+    }
+
+    .footer-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--warm-gray);
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--parchment); }
+    ::-webkit-scrollbar-thumb { background: var(--warm-gray); border-radius: 0; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">André <span>Francisco</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#work">Trabalho</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Falar comigo</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <p class="hero-overline">Fotógrafo &amp; Designer</p>
+      <h1 class="hero-name">André<br/><em>Francisco</em></h1>
+      <p class="hero-bio">
+        Criador de imagens que habitam o espaço entre o analógico e o digital. 
+        Cada projeto carrega o peso da luz e a quietude de um momento suspenso.
+      </p>
+      <a href="#work" class="hero-cta">Ver trabalho</a>
+    </div>
+    <div class="hero-right">
+      <div class="hero-bg-text">AF</div>
+      <div class="hero-right-inner">
+        <div class="hero-tools">
+          <p class="hero-tools-label">Meios &amp; ferramentas</p>
+          <div class="tools-grid">
+            <span class="tool-tag">Filme 35mm</span>
+            <span class="tool-tag">Câmara analógica</span>
+            <span class="tool-tag">Tipografia</span>
+            <span class="tool-tag">Ilustração</span>
+            <span class="tool-tag">Editorial</span>
+            <span class="tool-tag">Identidade visual</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="section-divider">
+    <span class="divider-label">Trabalho selecionado</span>
+    <div class="divider-line"></div>
+    <span class="divider-num">2020 — 2025</span>
+  </div>
+
+  <!-- WORK -->
+  <section class="work-section" id="work">
+    <div class="section-header">
+      <h2 class="section-title">Projetos</h2>
+      <span class="section-note">06 trabalhos</span>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-image card-bg-1">
+          <div class="project-image-placeholder">I</div>
+        </div>
+        <div class="project-body">
+          <p class="project-season">Outono, 2024</p>
+          <div class="project-header">
+            <h3 class="project-title">Retratos de Lisboa</h3>
+            <div class="project-actions">
+              <a href="#" class="project-btn" title="Ver arquivo">⊞</a>
+              <a href="#" class="project-btn" title="Abrir projeto">↗</a>
+            </div>
+          </div>
+          <p class="project-desc">Série fotográfica em filme 35mm sobre a luz da cidade ao entardecer. Silhuetas, sombras e texturas da calçada.</p>
+          <div class="project-tags">
+            <span class="project-tag">Fotografia</span>
+            <span class="project-tag">Filme</span>
+            <span class="project-tag">Urbano</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image card-bg-2">
+          <div class="project-image-placeholder">II</div>
+        </div>
+        <div class="project-body">
+          <p class="project-season">Verão, 2024</p>
+          <div class="project-header">
+            <h3 class="project-title">Identidade — Studio Branco</h3>
+            <div class="project-actions">
+              <a href="#" class="project-btn" title="Ver arquivo">⊞</a>
+              <a href="#" class="project-btn" title="Abrir projeto">↗</a>
+            </div>
+          </div>
+          <p class="project-desc">Sistema de identidade visual para estúdio de arquitetura. Marca, tipografia e papelaria com caráter mineral e atemporal.</p>
+          <div class="project-tags">
+            <span class="project-tag">Branding</span>
+            <span class="project-tag">Identidade</span>
+            <span class="project-tag">Print</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image card-bg-3">
+          <div class="project-image-placeholder">III</div>
+        </div>
+        <div class="project-body">
+          <p class="project-season">Primavera, 2024</p>
+          <div class="project-header">
+            <h3 class="project-title">Revista Campo</h3>
+            <div class="project-actions">
+              <a href="#" class="project-btn" title="Ver arquivo">⊞</a>
+              <a href="#" class="project-btn" title="Abrir projeto">↗</a>
+            </div>
+          </div>
+          <p class="project-desc">Direção de arte e layout para revista trimestral sobre cultura rural portuguesa. Editorial com grid clássico.</p>
+          <div class="project-tags">
+            <span class="project-tag">Editorial</span>
+            <span class="project-tag">Layout</span>
+            <span class="project-tag">Tipografia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image card-bg-4">
+          <div class="project-image-placeholder">IV</div>
+        </div>
+        <div class="project-body">
+          <p class="project-season">Inverno, 2023</p>
+          <div class="project-header">
+            <h3 class="project-title">Cartaz — Ciclo de Cinema</h3>
+            <div class="project-actions">
+              <a href="#" class="project-btn" title="Ver arquivo">⊞</a>
+              <a href="#" class="project-btn" title="Abrir projeto">↗</a>
+            </div>
+          </div>
+          <p class="project-desc">Série de cartazes para ciclo de cinema mudo. Composição com colagem analógica, texto à mão e cianotipia.</p>
+          <div class="project-tags">
+            <span class="project-tag">Cartaz</span>
+            <span class="project-tag">Colagem</span>
+            <span class="project-tag">Ilustração</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image card-bg-5">
+          <div class="project-image-placeholder">V</div>
+        </div>
+        <div class="project-body">
+          <p class="project-season">Outono, 2023</p>
+          <div class="project-header">
+            <h3 class="project-title">Catálogo — Cerâmica Muda</h3>
+            <div class="project-actions">
+              <a href="#" class="project-btn" title="Ver arquivo">⊞</a>
+              <a href="#" class="project-btn" title="Abrir projeto">↗</a>
+            </div>
+          </div>
+          <p class="project-desc">Fotografia de produto e direção editorial para marca de cerâmica artesanal. Luz natural, fundos terrosos.</p>
+          <div class="project-tags">
+            <span class="project-tag">Fotografia</span>
+            <span class="project-tag">Produto</span>
+            <span class="project-tag">Catálogo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image card-bg-6">
+          <div class="project-image-placeholder">VI</div>
+        </div>
+        <div class="project-body">
+          <p class="project-season">Verão, 2023</p>
+          <div class="project-header">
+            <h3 class="project-title">Paisagem — Costa Atlântica</h3>
+            <div class="project-actions">
+              <a href="#" class="project-btn" title="Ver arquivo">⊞</a>
+              <a href="#" class="project-btn" title="Abrir projeto">↗</a>
+            </div>
+          </div>
+          <p class="project-desc">Caderno de campo fotográfico ao longo da costa portuguesa. Médio formato, prancha de contacto, bruma atlântica.</p>
+          <div class="project-tags">
+            <span class="project-tag">Fotografia</span>
+            <span class="project-tag">Paisagem</span>
+            <span class="project-tag">Médio formato</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="section-divider">
+    <span class="divider-label">Sobre o autor</span>
+    <div class="divider-line"></div>
+    <span class="divider-num">Aveiro, PT</span>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="about-left">
+      <p class="about-title">Quem sou</p>
+      <p class="about-text">
+        Sou André Francisco, fotógrafo e designer baseado em Portugal. 
+        O meu trabalho vive na fronteira entre a imagem e a palavra — 
+        na forma como uma fotografia pode contar silêncio, ou um tipo de letra 
+        pode transportar o peso de um arquivo.
+      </p>
+      <p class="about-text">
+        Formado em Design de Comunicação, trabalho com marcas, editores e 
+        pessoas que acreditam que o tempo investido numa boa imagem 
+        é tempo bem gasto.
+      </p>
+      <div class="about-stat-row">
+        <div class="stat">
+          <span class="stat-num">12+</span>
+          <span class="stat-label">Anos de prática</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">80+</span>
+          <span class="stat-label">Projetos realizados</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Prémios nacionais</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">∞</span>
+          <span class="stat-label">Rolos revelados</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-right">
+      <p class="about-quote">
+        "Fotografar não é capturar o mundo — 
+        é escolher o que merece durar."
+      </p>
+      <span class="about-quote-attr">André Francisco</span>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="section-divider">
+    <span class="divider-label">Contacto</span>
+    <div class="divider-line"></div>
+    <span class="divider-num">Disponível para projetos</span>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-left">
+      <p class="contact-eyebrow">Vamos trabalhar juntos</p>
+      <h2 class="contact-title">Tem um<br/>projeto?</h2>
+      <a href="/cdn-cgi/l/email-protection#c7a8aba687a6a9a3b5a2a1b5a6a9a4aeb4a4a8e9b7b3" class="contact-email"><span class="__cf_email__" data-cfemail="88e7e4e9c8e9e6ecfaedeefae9e6ebe1fbebe7a6f8fc">[email&#160;protected]</span></a>
+    </div>
+    <div class="contact-right">
+      <div class="social-links">
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">Behance</a>
+        <a href="#" class="social-link">LinkedIn</a>
+        <a href="#" class="social-link">Unsplash</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-copy">© 2025 Andr

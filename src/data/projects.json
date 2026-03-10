@@ -1,0 +1,162 @@
+[
+  {
+    "id": "retratos-de-lisboa",
+    "number": "I",
+    "season": "Outono, 2024",
+    "title": "Retratos de Lisboa",
+    "description": "Série fotográfica em filme 35mm sobre a luz da cidade ao entardecer. Silhuetas, sombras e texturas da calçada.",
+    "tags": ["Fotografia", "Filme", "Urbano"],
+    "cardBg": "#D4C4A8",
+    "detail": {
+      "subtitle": "A luz suspensa de Lisboa",
+      "fullDescription": "Um projeto pessoal que explora a relação entre a luz natural de Lisboa e as suas superfícies. Fotografado inteiramente em filme 35mm ao longo de três meses, entre setembro e novembro de 2024. Cada imagem procura capturar o momento em que a luz do entardecer transforma a cidade — silhuetas nos elétricos, sombras nas calçadas, texturas nas fachadas de azulejo.",
+      "process": [
+        "Pesquisa e reconhecimento de locais durante diferentes horas do dia, mapeando a incidência de luz em ruas, praças e miradouros.",
+        "Seleção de filme — Kodak Portra 400 para tons quentes e Ilford HP5 para contraste em preto e branco.",
+        "Sessões fotográficas ao longo de 3 meses, sempre entre as 16h e as 19h para capturar a golden hour.",
+        "Revelação manual em laboratório e digitalização em scanner de alta resolução.",
+        "Edição e sequenciação final — seleção de 24 imagens a partir de mais de 400 fotografias."
+      ],
+      "images": [
+        "/images/projects/lisboa-01.jpg",
+        "/images/projects/lisboa-02.jpg",
+        "/images/projects/lisboa-03.jpg",
+        "/images/projects/lisboa-04.jpg",
+        "/images/projects/lisboa-05.jpg",
+        "/images/projects/lisboa-06.jpg"
+      ]
+    }
+  },
+  {
+    "id": "studio-branco",
+    "number": "II",
+    "season": "Verão, 2024",
+    "title": "Identidade — Studio Branco",
+    "description": "Sistema de identidade visual para estúdio de arquitetura. Marca, tipografia e papelaria com caráter mineral e atemporal.",
+    "tags": ["Branding", "Identidade", "Print"],
+    "cardBg": "#C8B89A",
+    "detail": {
+      "subtitle": "Mineral, atemporal, arquitetónico",
+      "fullDescription": "Desenvolvimento completo de identidade visual para o Studio Branco, um atelier de arquitetura contemporânea em Aveiro. O conceito partiu da materialidade — betão, pedra, luz — traduzida em formas tipográficas limpas e uma paleta monocromática com apontamentos terrosos. O sistema inclui logótipo, tipografia institucional, papelaria completa e guidelines de aplicação.",
+      "process": [
+        "Briefing e imersão no universo do cliente — visitas ao atelier, análise de projetos de arquitetura, entrevistas com os sócios.",
+        "Moodboard e exploração conceptual — referências em materialidade, brutalismo suave e tipografia suíça.",
+        "Desenvolvimento do logótipo — 40+ iterações até à versão final com tipografia geométrica personalizada.",
+        "Design do sistema tipográfico e paleta cromática, com regras claras de hierarquia e aplicação.",
+        "Produção de papelaria — cartões de visita em papel texturado 350g com impressão letterpress, envelopes e pasta de projeto."
+      ],
+      "images": [
+        "/images/projects/branco-01.jpg",
+        "/images/projects/branco-02.jpg",
+        "/images/projects/branco-03.jpg",
+        "/images/projects/branco-04.jpg"
+      ]
+    }
+  },
+  {
+    "id": "site-aurora",
+    "number": "III",
+    "season": "Primavera, 2024",
+    "title": "Website — Aurora Wellness",
+    "description": "Design e desenvolvimento de website para clínica de bem-estar. Interface serena com animações fluidas e reserva online.",
+    "tags": ["Web Design", "Desenvolvimento", "UI/UX"],
+    "cardBg": "#BFAA8A",
+    "detail": {
+      "subtitle": "Uma experiência digital de calma",
+      "fullDescription": "Projeto de web design e desenvolvimento para a Aurora Wellness, uma clínica de bem-estar e yoga no Porto. O desafio foi traduzir a sensação de tranquilidade do espaço físico para o digital — com navegação intuitiva, animações suaves e um sistema de reserva de aulas integrado. Desenvolvido em React com atenção especial à performance e acessibilidade.",
+      "process": [
+        "Workshop de descoberta com a equipa da Aurora — entender a marca, os serviços e o público-alvo.",
+        "Wireframes e prototipagem em Figma, com testes de usabilidade junto a clientes reais da clínica.",
+        "Design visual — paleta inspirada em tons naturais, tipografia humanista e espaços generosos de respiração.",
+        "Desenvolvimento front-end em React com animações de scroll e transições de página suaves.",
+        "Integração do sistema de reservas e otimização para mobile, com testes em múltiplos dispositivos."
+      ],
+      "images": [
+        "/images/projects/aurora-01.jpg",
+        "/images/projects/aurora-02.jpg",
+        "/images/projects/aurora-03.jpg",
+        "/images/projects/aurora-04.jpg",
+        "/images/projects/aurora-05.jpg"
+      ]
+    }
+  },
+  {
+    "id": "motion-ciclo-cinema",
+    "number": "IV",
+    "season": "Inverno, 2023",
+    "title": "Motion — Ciclo de Cinema",
+    "description": "Série de animações e cartazes animados para ciclo de cinema mudo. Composição com colagem, tipografia cinética e texturas analógicas.",
+    "tags": ["Animação", "Motion", "Cartaz"],
+    "cardBg": "#CAB99E",
+    "detail": {
+      "subtitle": "Movimento que nasce do silêncio",
+      "fullDescription": "Criação de uma série de peças de motion design para a divulgação de um ciclo de cinema mudo organizado pelo Cineclube de Aveiro. Cada cartaz animado é inspirado num filme do programa — usando colagem digital, tipografia cinética e texturas de película degradada. As animações foram pensadas para redes sociais e projeção em sala.",
+      "process": [
+        "Visionamento dos filmes do ciclo e pesquisa visual — expressionismo alemão, cinema soviético, slapstick americano.",
+        "Desenvolvimento do conceito visual — fusão entre estética de película antiga e motion design contemporâneo.",
+        "Criação de assets — digitalização de texturas em papel, recortes de jornal e fragmentos tipográficos.",
+        "Animação em After Effects — tipografia cinética, transições com grain e flicker, loops para redes sociais.",
+        "Adaptação para diferentes formatos — stories, posts quadrados, projeção horizontal em sala de cinema."
+      ],
+      "images": [
+        "/images/projects/cinema-01.jpg",
+        "/images/projects/cinema-02.jpg",
+        "/images/projects/cinema-03.jpg",
+        "/images/projects/cinema-04.jpg"
+      ]
+    }
+  },
+  {
+    "id": "ceramica-muda",
+    "number": "V",
+    "season": "Outono, 2023",
+    "title": "Catálogo — Cerâmica Muda",
+    "description": "Fotografia de produto e direção editorial para marca de cerâmica artesanal. Luz natural, fundos terrosos.",
+    "tags": ["Fotografia", "Produto", "Editorial"],
+    "cardBg": "#D2C5AE",
+    "detail": {
+      "subtitle": "A beleza do feito à mão",
+      "fullDescription": "Projeto de fotografia de produto e design editorial para a Cerâmica Muda, uma marca artesanal de cerâmica do Alentejo. O catálogo foi pensado como um objeto em si — papel texturado, impressão a duas tintas e fotografia que valoriza as imperfeições naturais de cada peça. Toda a fotografia foi feita com luz natural no atelier da ceramista.",
+      "process": [
+        "Visita ao atelier — compreensão do processo cerâmico, seleção de peças e definição do tom editorial.",
+        "Sessão fotográfica de 3 dias no atelier, usando apenas luz natural e fundos de materiais naturais — linho, barro seco, madeira.",
+        "Tratamento fotográfico focado em manter a fidelidade das cores e texturas do barro.",
+        "Design editorial do catálogo — grid clássico de 12 colunas, tipografia serifada e espaços de respiro generosos.",
+        "Acompanhamento de produção gráfica — escolha de papel Munken Lynx 150g e impressão offset a duas cores."
+      ],
+      "images": [
+        "/images/projects/ceramica-01.jpg",
+        "/images/projects/ceramica-02.jpg",
+        "/images/projects/ceramica-03.jpg",
+        "/images/projects/ceramica-04.jpg",
+        "/images/projects/ceramica-05.jpg"
+      ]
+    }
+  },
+  {
+    "id": "portfolio-mariana",
+    "number": "VI",
+    "season": "Verão, 2023",
+    "title": "Website — Portfolio Mariana Soares",
+    "description": "Design e desenvolvimento de portfolio online para ilustradora. Layout editorial com galerias dinâmicas e animações de scroll.",
+    "tags": ["Web Design", "Desenvolvimento", "Portfolio"],
+    "cardBg": "#C0AF97",
+    "detail": {
+      "subtitle": "Um portfolio que respira ilustração",
+      "fullDescription": "Criação de portfolio digital para a ilustradora Mariana Soares. O objetivo era criar um espaço online que funcionasse como uma extensão do seu trabalho — editorial, orgânico e visualmente rico. O site apresenta as suas ilustrações em galerias dinâmicas com transições suaves, navegação por projetos e uma secção de loja integrada para prints.",
+      "process": [
+        "Reuniões com a Mariana para entender o seu universo visual e as necessidades do portfolio — organização por projetos, loja de prints, contacto.",
+        "Moodboard e wireframes — inspiração em revistas de arte e galerias online minimalistas.",
+        "Design em Figma com sistema de componentes reutilizáveis e variantes para diferentes estados.",
+        "Desenvolvimento front-end com React e animações de scroll usando Intersection Observer.",
+        "Deploy e configuração de domínio personalizado, com otimização de imagens para carregamento rápido."
+      ],
+      "images": [
+        "/images/projects/mariana-01.jpg",
+        "/images/projects/mariana-02.jpg",
+        "/images/projects/mariana-03.jpg",
+        "/images/projects/mariana-04.jpg"
+      ]
+    }
+  }
+]

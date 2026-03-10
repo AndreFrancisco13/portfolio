@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Design Spec — André Francisco Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --parchment: #F2EBD9;
+      --parchment-dark: #E8DEC8;
+      --ink: #1E1810;
+      --terracotta: #8B4A2F;
+      --warm-gray: #C4B49A;
+      --sepia: #7A6145;
+      --dust: #A89880;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: 'Courier Prime', monospace;
+      font-size: 14px;
+      line-height: 1.75;
+      padding: 4rem 5rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .doc-header {
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 2rem;
+      margin-bottom: 3rem;
+    }
+    .doc-overline {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 0.5rem;
+    }
+    .doc-title {
+      font-family: 'Courier Prime', monospace;
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .doc-subtitle {
+      font-size: 0.85rem;
+      color: var(--sepia);
+    }
+    .doc-meta {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 3rem;
+    }
+    .meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .meta-label { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dust); }
+    .meta-value { font-size: 0.8rem; font-weight: 700; }
+
+    h2 {
+      font-family: 'Courier Prime', monospace;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 3.5rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--warm-gray);
+      color: var(--ink);
+    }
+    h3 {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-top: 2rem;
+      margin-bottom: 0.7rem;
+    }
+    p { margin-bottom: 0.9rem; font-size: 0.875rem; color: var(--sepia); }
+    p strong { color: var(--ink); }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 1rem 0 2rem;
+    }
+    .color-swatch {
+      border: 1.5px solid var(--warm-gray);
+    }
+    .swatch-block { height: 60px; }
+    .swatch-info { padding: 0.6rem 0.7rem; border-top: 1px solid var(--warm-gray); }
+    .swatch-name { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 0.2rem; }
+    .swatch-hex { font-size: 0.7rem; color: var(--sepia); }
+    .swatch-role { font-size: 0.6rem; color: var(--dust); margin-top: 0.2rem; display: block; }
+
+    .font-demo {
+      border: 1.5px solid var(--warm-gray);
+      padding: 1.5rem;
+      margin: 0.8rem 0 1.5rem;
+      background: white;
+    }
+    .font-name { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dust); margin-bottom: 0.8rem; }
+    .font-sample-courier { font-family: 'Courier Prime', monospace; }
+    .font-sample-playfair { font-family: 'Playfair Display', serif; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 2rem;
+      font-size: 0.8rem;
+    }
+    th {
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--dust);
+      text-align: left;
+      padding: 0.5rem 0.8rem;
+      border-bottom: 1px solid var(--warm-gray);
+      background: var(--parchment-dark);
+    }
+    td {
+      padding: 0.6rem 0.8rem;
+      border-bottom: 1px solid var(--parchment-dark);
+      color: var(--sepia);
+      vertical-align: top;
+    }
+    td strong { color: var(--ink); }
+    tr:last-child td { border-bottom: none; }
+
+    .section-block {
+      border: 1.5px solid var(--warm-gray);
+      padding: 1.5rem;
+      margin: 0.8rem 0 1.5rem;
+      background: white;
+    }
+    .section-block p { color: var(--ink); margin: 0; font-size: 0.83rem; }
+    .section-block ul { padding-left: 1.2rem; color: var(--sepia); font-size: 0.83rem; }
+    .section-block li { margin-bottom: 0.3rem; }
+
+    .tag-demo {
+      display: inline-block;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      border: 1.5px solid var(--ink);
+      padding: 0.25rem 0.7rem;
+      margin: 0.2rem;
+    }
+    .btn-demo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink);
+      border: 2px solid var(--ink);
+      padding: 0.55rem 1.2rem;
+      box-shadow: 3px 3px 0px var(--ink);
+      margin: 0.5rem 0;
+    }
+    .divider-demo {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      height: 52px;
+      border-top: 1px solid var(--warm-gray);
+      border-bottom: 1px solid var(--warm-gray);
+      margin: 1rem 0;
+      padding: 0 0.5rem;
+    }
+    .divider-demo span:first-child { font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--dust); }
+    .divider-demo-line { flex: 1; height: 1px; background: var(--warm-gray); }
+    .divider-demo span:last-child { font-size: 0.72rem; color: var(--warm-gray); }
+
+    .note {
+      background: var(--parchment-dark);
+      border-left: 3px solid var(--terracotta);
+      padding: 0.8rem 1rem;
+      font-size: 0.78rem;
+      color: var(--sepia);
+      margin: 1rem 0;
+    }
+    .note strong { color: var(--terracotta); }
+
+    .code {
+      background: #EDE5D0;
+      border: 1px solid var(--warm-gray);
+      padding: 0.2rem 0.5rem;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.78rem;
+      color: var(--ink);
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--warm-gray);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dust);
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="doc-header">
+    <p class="doc-overline">Design Specification Document</p>
+    <h1 class="doc-title">André Francisco<br/>Portfolio — Design Spec</h1>
+    <p class="doc-subtitle">Documento de referência completo para replicação do projeto em qualquer ferramenta de IA ou ambiente de desenvolvimento.</p>
+    <div class="doc-meta">
+      <div class="meta-item"><span class="meta-label">Versão</span><span class="meta-value">1.0</span></div>
+      <div class="meta-item"><span class="meta-label">Tecnologia</span><span class="meta-value">HTML / CSS / JS</span></div>
+      <div class="meta-item"><span class="meta-label">Idioma</span><span class="meta-value">Português (PT)</span></div>
+      <div class="meta-item"><span class="meta-label">Estilo</span><span class="meta-value">Vintage Analógico</span></div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>01 — Conceito e Personalidade</h2>
+
+  <p><strong>Nome do projeto:</strong> Portfolio de André Francisco — fotógrafo e designer baseado em Portugal.</p>
+  <p><strong>Conceito central:</strong> "The Still Studio" — um portfolio que evoca um estúdio de impressão analógico, silencioso e iluminado a luz natural. Tudo comunica tempo, intenção e matéria.</p>
+  <p><strong>Personalidade:</strong> Calmo, artesanal, vintage, confiante. Sem urgência digital. Cada detalhe comunica que o criador experimenta o tempo de forma diferente da internet.</p>
+  <p><strong>Influências visuais:</strong> Capas da Vogue dos anos 40, revistas editoriais tipográficas, tecnologia retro dos anos 80 (computadores e walkmans), câmaras analógicas e pranchas de contacto fotográfico.</p>
+  <p><strong>Cursor:</strong> <span class="code">cursor: crosshair</span> — reforça a linguagem fotográfica/de estúdio.</p>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>02 — Paleta de Cores</h2>
+
+  <div class="color-grid">
+    <div class="color-swatch">
+      <div class="swatch-block" style="background:#F2EBD9"></div>
+      <div class="swatch-info">
+        <span class="swatch-name">Parchment</span>
+        <span class="swatch-hex">#F2EBD9</span>
+        <span class="swatch-role">Fundo principal — tom de pergaminho quente, nunca branco puro</span>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-block" style="background:#E8DEC8"></div>
+      <div class="swatch-info">
+        <span class="swatch-name">Parchment Dark</span>
+        <span class="swatch-hex">#E8DEC8</span>
+        <span class="swatch-role">Fundo secundário — cards, painéis, hero direito</span>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-block" style="background:#1E1810"></div>
+      <div class="swatch-info">
+        <span class="swatch-name">Ink</span>
+        <span class="swatch-hex">#1E1810</span>
+        <span class="swatch-role">Cor principal de texto e bordas — quase-preto com tom quente</span>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-block" style="background:#3A2F22"></div>
+      <div class="swatch-info">
+        <span class="swatch-name">Ink Soft</span>
+        <span class="swatch-hex">#3A2F22</span>
+        <span class="swatch-role">Tinta suave — tags, texto secundário escuro</span>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-block" style="background:#8B4A2F"></div>
+      <div class="swatch-info">
+        <span class="swatch-name">Terracotta</span>
+        <span class="swatch-hex">#8B4A2F</span>
+        <span class="swatch-role">Cor de acento principal — hover, destaques, labels</span>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-block" style="background:#B87333"></div>
+      <div class="swatch-info">
+        <span class="swatch-name">Amber</span>
+        <span class="swatch-hex">#B87333</span>
+        <span class="swatch-role">Âmbar — cobre oxidado, uso pontual</span>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-block" style="background:#C4B49A"></div>
+      <div class="swatch-info">
+        <span class="swatch-name">Warm Gray</span>
+        <span class="swatch-hex">#C4B49A</span>
+        <span class="swatch-role">Cinza quente — bordas, separadores, scrollbar</span>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-block" style="background:#7A6145"></div>
+      <div class="swatch-info">
+        <span class="swatch-name">Sepia</span>
+        <span class="swatch-hex">#7A6145</span>
+        <span class="swatch-role">Sépia — corpo de texto, descrições</span>
+      </div>
+    </div>
+    <div class="color-swatch">
+      <div class="swatch-block" style="background:#A89880"></div>
+      <div class="swatch-info">
+        <span class="swatch-name">Dust</span>
+        <span class="swatch-hex">#A89880</span>
+        <span class="swatch-role">Poeira — labels, metadados, texto terciário</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="note"><strong>Regra de cor:</strong> Nunca usar branco puro (#FFFFFF) nem preto puro (#000000). Todos os tons têm calor amarelado. O terracota é usado apenas em destaques — links hover, eyebrows, sombras de botões no hover.</div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>03 — Tipografia</h2>
+
+  <div class="note"><strong>Regra de uniformização (última decisão):</strong> Todos os títulos e headings usam <strong>Courier Prime Bold</strong>. A Playfair Display fica reservada exclusivamente para a citação da secção About e elementos puramente decorativos.</div>
+
+  <h3>Fonte Principal — Courier Prime</h3>
+  <p>Google Fonts: <span class="code">family=Courier+Prime:ital,wght@0,400;0,700;1,400</span></p>
+  <div class="font-demo">
+    <p class="font-name">Courier Prime — aplicações</p>
+    <p class="font-sample-courier" style="font-size:2.5rem;font-weight:700;line-height:1.1;">Projetos</p>
+    <p class="font-sample-courier" style="font-size:1.15rem;font-weight:700;margin-top:0.5rem;">Retratos de Lisboa</p>
+    <p class="font-sample-courier" style="font-size:0.88rem;color:#7A6145;margin-top:0.5rem;">Criador de imagens que habitam o espaço entre o analógico e o digital.</p>
+    <p class="font-sample-courier" style="font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;margin-top:0.5rem;color:#8B4A2F;">TRABALHO · SOBRE · CONTACTO</p>
+  </div>
+
+  <h3>Fonte Secundária — Playfair Display (apenas citações)</h3>
+  <p>Google Fonts: <span class="code">family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700</span></p>
+  <div class="font-demo">
+    <p class="font-name">Playfair Display — uso restrito</p>
+    <p class="font-sample-playfair" style="font-size:1.8rem;font-style:italic;font-weight:400;line-height:1.45;color:#3A2F22;">"Fotografar não é capturar o mundo — é escolher o que merece durar."</p>
+    <p class="font-sample-playfair" style="font-size:0.7rem;letter-spacing:0.15em;color:#A89880;margin-top:0.5rem;">— André Francisco</p>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>Elemento</th><th>Fonte</th><th>Tamanho</th><th>Peso</th><th>Notas</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Hero Name (h1)</strong></td><td>Courier Prime</td><td>clamp(3.5rem, 6.5vw, 7rem)</td><td>700</td><td>line-height: 0.92; letter-spacing: -0.02em</td></tr>
+      <tr><td><strong>Section Title (h2)</strong></td><td>Courier Prime</td><td>2.5rem</td><td>700</td><td>Sem itálico</td></tr>
+      <tr><td><strong>Project Title (h3)</strong></td><td>Courier Prime</td><td>1.15rem</td><td>700</td><td>line-height: 1.15</td></tr>
+      <tr><td><strong>About Title</strong></td><td>Courier Prime</td><td>2.2rem</td><td>700</td><td>—</td></tr>
+      <tr><td><strong>Contact Title</strong></td><td>Courier Prime</td><td>clamp(2.2rem, 4.5vw, 4rem)</td><td>700</td><td>line-height: 1</td></tr>
+      <tr><td><strong>Stat Numbers</strong></td><td>Courier Prime</td><td>2.4rem</td><td>700</td><td>line-height: 1</td></tr>
+      <tr><td><strong>Nav Logo</strong></td><td>Courier Prime</td><td>1.05rem</td><td>700</td><td>"Francisco" em terracota</td></tr>
+      <tr><td><strong>Nav Links</strong></td><td>Courier Prime</td><td>0.7rem</td><td>700</td><td>letter-spacing: 0.2em; uppercase</td></tr>
+      <tr><td><strong>Body / Descrições</strong></td><td>Courier Prime</td><td>0.88rem</td><td>400</td><td>color: sepia; line-height: 1.9</td></tr>
+      <tr><td><strong>Labels / Eyebrows</strong></td><td>Courier Prime</td><td>0.62–0.68rem</td><td>400</td><td>letter-spacing: 0.18–0.25em; uppercase; color: terracota ou dust</td></tr>
+      <tr><td><strong>Citação About</strong></td><td>Playfair Display</td><td>2rem</td><td>400 italic</td><td>Único uso de Playfair em títulos visíveis</td></tr>
+    </tbody>
+  </table>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>04 — Efeitos Globais</h2>
+
+  <h3>Grain Overlay (textura de papel)</h3>
+  <p>Aplicado via <span class="code">body::before</span> com <span class="code">position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: 0.045</span>. Usa um SVG inline com <span class="code">feTurbulence</span> (fractalNoise, baseFrequency 0.9, 4 octaves) como background-image com 200×200px de tile. Cria uma textura subtil de grão de papel analógico em toda a página.</p>
+
+  <h3>Scrollbar personalizada</h3>
+  <p>Largura 6px, thumb em warm-gray, sem border-radius (ângulos retos, estilo analógico), track em parchment.</p>
+
+  <h3>Animações de entrada</h3>
+  <p>Dois keyframes: <span class="code">fadeUp</span> (opacity 0→1 + translateY 24px→0) e <span class="code">fadeIn</span> (opacity 0→1). Hero esquerdo aparece em 1s com delay 0.2s. Hero direito em 1.4s com delay 0.5s. Cards aparecem em escalonamento: delay 0.1s, 0.25s, 0.4s, 0.55s, 0.7s, 0.85s.</p>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>05 — Estrutura da Página (Secções)</h2>
+
+  <table>
+    <thead><tr><th>Secção</th><th>Layout</th><th>Detalhe</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>NAV</strong></td>
+        <td>fixed, flex, space-between</td>
+        <td>Logo esquerda · Links + CTA direita. Padding 1.2rem 3.5rem. Border-bottom 1px warm-gray. Background parchment.</td>
+      </tr>
+      <tr>
+        <td><strong>HERO</strong></td>
+        <td>grid 1fr 1fr, 100vh</td>
+        <td>Esquerda: nome + bio + CTA link. Direita: fundo parchment-dark com "AF" tipográfico gigante decorativo + tags de ferramentas. Divididos por border-right 1px warm-gray.</td>
+      </tr>
+      <tr>
+        <td><strong>SECTION DIVIDER</strong></td>
+        <td>flex, altura 52px</td>
+        <td>Label uppercase esquerda · linha horizontal · número/texto direita. Border-top e bottom 1px warm-gray. Repete entre todas as secções.</td>
+      </tr>
+      <tr>
+        <td><strong>WORK</strong></td>
+        <td>padding 6rem 3.5rem</td>
+        <td>Header com título + contagem. Grid 3 colunas, gap 1.8rem, 6 cards.</td>
+      </tr>
+      <tr>
+        <td><strong>ABOUT</strong></td>
+        <td>grid 1fr 1fr</td>
+        <td>Esquerda: texto bio + 4 stats em grid 2×2. Direita: fundo parchment-dark com citação em Playfair italic.</td>
+      </tr>
+      <tr>
+        <td><strong>CONTACT</strong></td>
+        <td>flex, space-between, align flex-end</td>
+        <td>Esquerda: eyebrow + título grande + email com underline. Direita: 4 redes sociais em coluna, uppercase, alinhadas à direita.</td>
+      </tr>
+      <tr>
+        <td><strong>FOOTER</strong></td>
+        <td>flex, space-between</td>
+        <td>Copyright esquerda · "Feito com lentidão" direita (Playfair italic, warmgray).</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>06 — Componentes de UI</h2>
+
+  <h3>Navbar CTA Button — "Falar comigo"</h3>
+  <div class="section-block">
+    <div class="btn-demo">Falar comigo</div>
+    <ul style="margin-top:1rem;">
+      <li>Border: 2px solid ink</li>
+      <li>Box-shadow: 3px 3px 0px ink (sombra deslocada sem blur)</li>
+      <li>Padding: 0.55rem 1.2rem</li>
+      <li>Fonte: Courier Prime 0.7rem, 700, uppercase, letter-spacing 0.18em</li>
+      <li>Hover: transform translate(-2px, -2px) + box-shadow 5px 5px 0px terracotta + border e cor terracotta</li>
+    </ul>
+  </div>
+
+  <h3>Project Cards</h3>
+  <div class="section-block">
+    <ul>
+      <li>Border: 2px solid ink</li>
+      <li>Box-shadow: 4px 4px 0px ink</li>
+      <li>Hover: transform translate(-3px, -3px) + box-shadow 7px 7px 0px terracotta</li>
+      <li>Estrutura interna: imagem topo (aspect-ratio 4/3, border-bottom 2px solid ink) → corpo com season label + header [título + 2 botões de ação] + descrição + tags</li>
+      <li>Imagem placeholder: algarismo romano centrado (Courier Prime 4rem bold)</li>
+      <li>Fundos dos placeholders: tons de bege escalonados (#D4C4A8 → #C0AF97)</li>
+    </ul>
+  </div>
+
+  <h3>Botões de Ação nos Cards (⊞ e ↗)</h3>
+  <div class="section-block">
+    <ul>
+      <li>Dimensões: 30×30px</li>
+      <li>Border: 1.5px solid ink</li>
+      <li>Hover: background ink + cor parchment (inversão)</li>
+    </ul>
+  </div>
+
+  <h3>Project Tags</h3>
+  <div class="section-block">
+    <span class="tag-demo">Fotografia</span>
+    <span class="tag-demo">Filme</span>
+    <span class="tag-demo">Urbano</span>
+    <ul style="margin-top:1rem;">
+      <li>Font: Courier Prime 0.62rem, uppercase, letter-spacing 0.1em</li>
+      <li>Border: 1.5px solid ink-soft</li>
+      <li>Padding: 0.25rem 0.7rem</li>
+      <li>Hover (via card hover): border e cor mudam para terracotta</li>
+    </ul>
+  </div>
+
+  <h3>Section Divider</h3>
+  <div class="section-block">
+    <div class="divider-demo">
+      <span>Trabalho selecionado</span>
+      <div class="divider-demo-line"></div>
+      <span>2020 — 2025</span>
+    </div>
+    <ul>
+      <li>Altura fixa: 52px</li>
+      <li>Flex com gap 1.5rem</li>
+      <li>Label: 0.65rem, uppercase, letter-spacing 0.25em, color dust</li>
+      <li>Linha: flex:1, height 1px, background warm-gray, opacity 0.5</li>
+      <li>Número/texto: Courier Prime 0.72rem, color warm-gray</li>
+    </ul>
+  </div>
+
+  <h3>Hero CTA Link ("Ver trabalho")</h3>
+  <div class="section-block">
+    <ul>
+      <li>Display inline-flex com seta ↓ via ::after</li>
+      <li>Border-bottom 1px solid ink (underline manual)</li>
+      <li>Font: 0.72rem, uppercase, letter-spacing 0.18em</li>
+      <li>Hover: cor e border mudam para terracotta</li>
+    </ul>
+  </div>
+
+  <h3>Hero Overline e Contact Eyebrow</h3>
+  <div class="section-block">
+    <ul>
+      <li>Font: 0.68rem, uppercase, letter-spacing 0.22em, color terracotta</li>
+      <li>Pseudo-elemento ::before com conteúdo "— " (travessão + espaço)</li>
+    </ul>
+  </div>
+
+  <h3>Stat Numbers (secção About)</h3>
+  <div class="section-block">
+    <ul>
+      <li>Courier Prime 2.4rem, 700, color ink, line-height 1</li>
+      <li>Label abaixo: 0.65rem, uppercase, letter-spacing 0.18em, color dust</li>
+      <li>Grid 2×2 com border-top 1px warm-gray</li>
+      <li>Conteúdo: "12+", "80+", "3", "∞" (símbolo infinito para rolos)</li>
+    </ul>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>07 — Espaçamentos e Paddings</h2>
+
+  <table>
+    <thead><tr><th>Contexto</th><th>Valor</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Padding lateral global</strong></td><td>3.5rem</td></tr>
+      <tr><td><strong>Padding vertical secções</strong></td><td>6rem top e bottom</td></tr>
+      <tr><td><strong>Hero left padding top</strong></td><td>8rem (empurra abaixo da nav fixa)</td></tr>
+      <tr><td><strong>Gap entre cards</strong></td><td>1.8rem</td></tr>
+      <tr><td><strong>Padding interno dos cards</strong></td><td>1.5rem 1.6rem 1.8rem</td></tr>
+      <tr><td><strong>Nav padding</strong></td><td>1.2rem 3.5rem</td></tr>
+      <tr><td><strong>Footer padding</strong></td><td>1.5rem 3.5rem</td></tr>
+    </tbody>
+  </table>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>08 — Conteúdo das Secções</h2>
+
+  <h3>Hero</h3>
+  <div class="section-block">
+    <p><strong>Overline:</strong> "Fotógrafo & Designer"</p>
+    <p><strong>Nome:</strong> "André" (linha 1) + "Francisco" (linha 2, em itálico + cor terracotta)</p>
+    <p><strong>Bio:</strong> "Criador de imagens que habitam o espaço entre o analógico e o digital. Cada projeto carrega o peso da luz e a quietude de um momento suspenso."</p>
+    <p><strong>CTA:</strong> "Ver trabalho" → âncora para #work</p>
+    <p><strong>Lado direito — Ferramentas:</strong> Filme 35mm · Câmara analógica · Tipografia · Ilustração · Editorial · Identidade visual</p>
+    <p><strong>Elemento decorativo:</strong> "AF" em Courier Prime gigante (clamp 10–22rem), italic, color parchment, opacity 0.55, centrado no lado direito</p>
+  </div>
+
+  <h3>6 Projetos</h3>
+  <table>
+    <thead><tr><th>N.º</th><th>Época</th><th>Título</th><th>Tags</th></tr></thead>
+    <tbody>
+      <tr><td>I</td><td>Outono, 2024</td><td>Retratos de Lisboa</td><td>Fotografia · Filme · Urbano</td></tr>
+      <tr><td>II</td><td>Verão, 2024</td><td>Identidade — Studio Branco</td><td>Branding · Identidade · Print</td></tr>
+      <tr><td>III</td><td>Primavera, 2024</td><td>Revista Campo</td><td>Editorial · Layout · Tipografia</td></tr>
+      <tr><td>IV</td><td>Inverno, 2023</td><td>Cartaz — Ciclo de Cinema</td><td>Cartaz · Colagem · Ilustração</td></tr>
+      <tr><td>V</td><td>Outono, 2023</td><td>Catálogo — Cerâmica Muda</td><td>Fotografia · Produto · Catálogo</td></tr>
+      <tr><td>VI</td><td>Verão, 2023</td><td>Paisagem — Costa Atlântica</td><td>Fotografia · Paisagem · Médio formato</td></tr>
+    </tbody>
+  </table>
+
+  <h3>About — Estatísticas</h3>
+  <div class="section-block">
+    <p>12+ Anos de prática · 80+ Projetos realizados · 3 Prémios nacionais · ∞ Rolos revelados</p>
+    <p style="margin-top:0.8rem;"><strong>Citação:</strong> "Fotografar não é capturar o mundo — é escolher o que merece durar." — André Francisco</p>
+  </div>
+
+  <h3>Contacto</h3>
+  <div class="section-block">
+    <p><strong>Eyebrow:</strong> "Vamos trabalhar juntos"</p>
+    <p><strong>Título:</strong> "Tem um projeto?"</p>
+    <p><strong>Email:</strong> ola@andrefrancisco.pt</p>
+    <p><strong>Redes sociais:</strong> Instagram · Behance · LinkedIn · Unsplash</p>
+  </div>
+
+  <h3>Dividers entre secções</h3>
+  <table>
+    <thead><tr><th>Posição</th><th>Label esquerda</th><th>Texto direita</th></tr></thead>
+    <tbody>
+      <tr><td>Antes de Work</td><td>Trabalho selecionado</td><td>2020 — 2025</td></tr>
+      <tr><td>Antes de About</td><td>Sobre o autor</td><td>Aveiro, PT</td></tr>
+      <tr><td>Antes de Contact</td><td>Contacto</td><td>Disponível para projetos</td></tr>
+    </tbody>
+  </table>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <h2>09 — Prompt Completo para Replicação</h2>
+
+  <div class="note">
+    <strong>Copia e cola este prompt numa outra IA:</strong>
+  </div>
+
+  <div class="section-block">
+    <p>Cria um portfolio HTML/CSS de página única para André Francisco, fotógrafo e designer português. Usa apenas HTML, CSS e JS vanilla — tudo num único ficheiro .html.</p>
+    <p><strong>IDENTIDADE:</strong> Vintage analógico. Tom calmo, artesanal, sem urgência digital. Inspirado em revistas editoriais dos anos 40, câmaras analógicas e pranchas de contacto fotográfico.</p>
+    <p><strong>FONTES (Google Fonts):</strong> Courier Prime (todos os títulos e corpo) + Playfair Display (apenas para a citação na secção About). Nunca usar Inter, Roboto ou Arial.</p>
+    <p><strong>PALETA:</strong> --parchment:#F2EBD9 (fundo), --parchment-dark:#E8DEC8 (fundos secundários), --ink:#1E1810 (texto/bordas), --ink-soft:#3A2F22, --terracotta:#8B4A2F (acento/hover), --warm-gray:#C4B49A (bordas leves), --sepia:#7A6145 (texto secundário), --dust:#A89880 (labels). Nunca usar branco puro nem preto puro.</p>
+    <p><strong>EFEITOS GLOBAIS:</strong> Grain overlay via body::before com SVG feTurbulence (fractalNoise, baseFrequency 0.9, 4 octaves), opacity 0.045, fixed, z-index 9999, pointer-events none. Cursor crosshair. Scrollbar personalizada 6px, sem border-radius.</p>
+    <p><strong>NAV (fixed):</strong> Logo "André Francisco" (Courier Prime 700, "Francisco" em terracota) esquerda. Direita: links TRABALHO · SOBRE · CONTACTO (Courier Prime 0.7rem bold uppercase letter-spacing 0.2em, hover terracota) + botão "FALAR COMIGO" com border 2px ink, box-shadow 3px 3px 0 ink, hover translate(-2px,-2px) + shadow 5px 5px 0 terracota.</p>
+    <p><strong>HERO (grid 1fr 1fr, 100vh):</strong> Esquerda: overline "— Fotógrafo & Designer" (terracota, ::before com "— ") + H1 "André / Francisco" (Francisco em itálico terracota, Courier Prime clamp 3.5rem→7rem 700) + bio + link "Ver trabalho ↓" com border-bottom. Direita: fundo parchment-dark, "AF" decorativo gigante (Courier Prime clamp 10–22rem, italic, opacity 0.55, centrado) + tags de ferramentas no rodapé.</p>
+    <p><strong>SECTION DIVIDER:</strong> Entre cada secção. Flex, altura 52px, border-top e bottom 1px warm-gray. Label uppercase dust esquerda · linha flex · texto warm-gray direita.</p>
+    <p><strong>WORK (grid 3 colunas, gap 1.8rem):</strong> 6 project cards. Cada card: border 2px ink, box-shadow 4px 4px 0 ink, hover translate(-3px,-3px) + shadow 7px 7px 0 terracota. Estrutura: imagem topo (4/3, fundo bege, número romano Courier Prime centrado, border-bottom 2px ink) + corpo com [season label terracota] + [header: título Courier Prime 1.15rem 700 + 2 botões 30×30px border 1.5px ink] + descrição sépia + tags (border 1.5px ink-soft, hover terracota).</p>
+    <p><strong>ABOUT (grid 1fr 1fr):</strong> Esquerda: título + 2 parágrafos bio + grid 2×2 de stats (12+, 80+, 3, ∞) com label em dust uppercase. Direita: fundo parchment-dark, citação em Playfair Display 2rem italic + atribuição "— André Francisco".</p>
+    <p><strong>CONTACT (flex space-between):</strong> Eyebrow terracota com ::before "— " + título grande + email com border-bottom + hover terracota. Direita: 4 links sociais em coluna uppercase.</p>
+    <p><strong>FOOTER:</strong> Copyright esquerda + "Feito com lentidão" direita (Playfair italic, warm-gray).</p>
+    <p><strong>ANIMAÇÕES:</strong> fadeUp (opacity 0→1 + translateY 24px→0) e fadeIn (opacity 0→1). Cards com animation-delay escalonado: 0.1s, 0.25s, 0.4s, 0.55s, 0.7s, 0.85s.</p>
+  </div>
+
+
+  <footer>
+    <span>André Francisco Portfolio — Design Spec v1.0</span>
+    <span>Março, 2026</span>
+  </footer>
+
+</body>
+</html>
