@@ -1,84 +1,8 @@
 [
-  {
-    "id": "chronos",
-    "number": "I",
-    "season": "2023",
-    "title": "Chronos",
-    "description": "Chronos retrata a evolução do sistema solar, desde o Big Bang até à exploração espacial humana, como uma linha temporal educativa e interativa.",
-    "tags": ["JavaScript", "Interativo", "SPA"],
-    "cardBg": "#D4C4A8",
-    "detail": {
-      "subtitle": "História interativa do sistema solar",
-      "fullDescription": "Chronos é uma plataforma interativa que apresenta marcos importantes da história do sistema solar de forma visual, educativa e imersiva.",
-      "process": [
-        "JavaScript foi usado para construir animações interativas e scroll animado, incluindo transições dinâmicas de tamanho e mudanças entre estados claro/escuro.",
-        "Figma apoiou o design e prototipagem da narrativa visual e cenas animadas.",
-        "Bootstrap foi usado para garantir layouts responsivos e consistência entre dispositivos."
-      ],
-      "images": [
-        "src/assets/images/projects/chronos/ChronosCover.png",
-        "src/assets/images/projects/chronos/chronos.jpg",
-        "src/assets/images/projects/chronos/chronos.png"
-      ]
-    }
-  },
-  {
-    "id": "dashboard-rresearch",
-    "number": "II",
-    "season": "2026",
-    "title": "Dashboard RResearch",
-    "description": "Dashboard orientado a analise de dados com foco em leitura rapida.",
-    "tags": ["Dashboard", "Data Viz", "UX/UI", "Hasura"],
-    "cardBg": "#C8B89A",
-    "detail": {
-      "subtitle": "Leitura de dados e decisao",
-      "fullDescription": "Projeto centrado em visualizacao e organizacao de informacao, com tres vistas principais no conjunto atual de imagens.",
-      "process": [
-        "Definicao dos indicadores e blocos de informacao.",
-        "Desenho da hierarquia visual do dashboard.",
-        "Ajustes de contraste, espacamento e legibilidade.",
-        "Implementacao dos componentes e funcionalidades com queries à base de dados da hasura."
-      ],
-      "images": [
-        "src/assets/images/projects/dashboard_rresearch/dash1.png",
-        "src/assets/images/projects/dashboard_rresearch/dash2.png",
-        "src/assets/images/projects/dashboard_rresearch/dash3.png"
-      ]
-    }
-  },
-  {
-    "id": "design-sprint",
-    "number": "III",
-    "season": "2024",
-    "title": "Design Sprint",
-    "description": "Processo completo de sprint: pesquisa, ideacao, prototipo e testes.",
-    "tags": ["Design Sprint", "UX", "Prototipagem"],
-    "cardBg": "#BFAA8A",
-    "detail": {
-      "subtitle": "Do problema ao prototipo",
-      "fullDescription": "Colecao de artefactos de sprint incluindo entrevistas, user journey, sketching, prototipos e validacao.",
-      "process": [
-        "Mapeamento do problema e formulacao de How Might We.",
-        "Sintese da pesquisa com user journey e insights.",
-        "Criacao de prototipos low fidelity.",
-        "Iteracao com base em testes e feedback.",
-        "Criação de prototipos high fidelity"
-      ],
-      "images": [
-        "src/assets/images/projects/design_sprint/coverBlog2.png",
-        "src/assets/images/projects/design_sprint/howMightWe.png",
-        "src/assets/images/projects/design_sprint/planeamento.png",
-        "src/assets/images/projects/design_sprint/prototipoHi.png",
-        "src/assets/images/projects/design_sprint/prototipoLo.png",
-        "src/assets/images/projects/design_sprint/sketch.png",
-        "src/assets/images/projects/design_sprint/userJourney.png",
-        "src/assets/images/projects/design_sprint/vitoria.jpg"
-      ]
-    }
-  },
-  {
+    
+    {
     "id": "framed-story",
-    "number": "IV",
+    "number": "I",
     "season": "2026",
     "title": "Framed Story",
     "description": "Experiência digital com versões desktop e mobile para apresentação de trabalho fotográfico.",
@@ -101,31 +25,8 @@
     }
   },
   {
-    "id": "oposti",
-    "number": "V",
-    "season": "2022",
-    "title": "Opposti",
-    "description": "Protótipo de alta fidelidade em Affinity Design para um café e gelataria moderna, estendendo a experiência na loja para encomendas digitais e registo em workshops.",
-    "tags": ["Produto Digital", "Marca", "UI"],
-    "cardBg": "#D2C5AE",
-    "detail": {
-      "subtitle": "Extensão digital da experiência de café",
-      "fullDescription": "A plataforma foi desenhada para suportar encomendas online e registo em workshops, preservando o caráter do espaço físico através de uma interface limpa e intuitiva.",
-      "process": [
-        "Fluxo de encomendas online permite aos utilizadores navegar no menu e encomendar café e gelados rapidamente.",
-        "Registo em workshops permite aos utilizadores inscreverem-se em workshops de café e culinária presenciais.",
-        "A UI foi desenhada para navegação clara e ações sem fricção desde a descoberta até ao checkout."
-      ],
-      "images": [
-        "src/assets/images/projects/oposti/OpostiCover.png",
-        "src/assets/images/projects/oposti/OpostiIphone.png",
-        "src/assets/images/projects/oposti/oposti.jpg"
-      ]
-    }
-  },
-  {
     "id": "pedro-henrique",
-    "number": "VI",
+    "number": "II",
     "season": "2025",
     "title": "Pedro Henrique",
     "description": "Projeto visual com exploração desktop e mobile de um site de arquitetura.",
@@ -148,33 +49,56 @@
     }
   },
   {
-    "id": "planetarium-pursuit",
-    "number": "VII",
-    "season": "2023",
-    "title": "Planetarium Pursuit",
-    "description": "Plataforma narrativa interativa comissionada pelo Planetário do Porto para criar e publicar cenários educativos baseados em histórias.",
-    "tags": ["UX/UI", "Gamificação", "Visual", "PHP", "MySQL", "JavaScript"],
-    "cardBg": "#BCA98D",
+    "id": "ser-mais",
+    "number": "III",
+    "season": "2025",
+    "title": "Ser+",
+    "description": "Projeto Ser Mais com foco na divulgação das atividades que ocorrem na Universidade de Aveiro fora do contexto das aulas.",
+    "tags": ["UI/UX", "UX Research"],
+    "cardBg": "#C7B59C",
     "detail": {
-      "subtitle": "Storytelling e interação educativa",
-      "fullDescription": "Os administradores podem construir cenários narrativos com personagens, objetos e fundos, criando experiências educativas semelhantes a jogos para os visitantes.",
+      "subtitle": "Direção visual e conceito da marca",
+      "fullDescription": "Projeto de direção visual e conceito para a marca Ser+, com foco na comunicação das atividades culturais e de lazer da Universidade de Aveiro, com reconhecimento de quem nelas participa.",
       "process": [
-        "PHP gere a criação de cenários, interações dos utilizadores e renderização de conteúdo dinâmico.",
-        "MySQL armazena histórias, assets e metadados para recuperação rápida durante a interação.",
-        "JavaScript suporta interações front-end como arrastar-e-soltar e colocação de objetos."
+        "Análise de contexto e objetivos dos stakeholders.",
+        "Construção do conceito da aplicação.",
+        "Aplicação do conceito em formato digital.",
+        "Criação de protótipos de alta fidelidade.",
+        "Investigação junto dos utilizadores."
       ],
       "images": [
-        "src/assets/images/projects/planetarium_pursuit/PlanetariumCover.png",
-        "src/assets/images/projects/planetarium_pursuit/PlanetariumFerramenta.png",
-        "src/assets/images/projects/planetarium_pursuit/PlanetariumPursuit.png",
-        "src/assets/images/projects/planetarium_pursuit/planetarium.jpg",
-        "src/assets/images/projects/planetarium_pursuit/planetariumMockup.png"
+        "src/assets/images/projects/ser_mais/ser+.png"
+      ]
+    }
+  },
+  {
+    "id": "betlearn",
+    "number": "IV",
+    "season": "2025",
+    "title": "BetLearn",
+    "description": "Aplicação mobile educativa que ensina os utilizadores a apostar de forma informada, simulando cenários reais do mundo desportivo.",
+    "tags": ["React Native", "UX/UI", "REST API", "Railway"],
+    "cardBg": "#C4B89E",
+    "detail": {
+      "subtitle": "Aprender a apostar com responsabilidade",
+      "fullDescription": "BetLearn é uma aplicação mobile que aproxima os utilizadores do universo das apostas desportivas de forma educativa, simulando cenários o mais próximos possível da realidade. O projeto passou por investigação, prototipagem lo-fi e hi-fi, testes de usabilidade para refinamento, e implementação final com React Native, API REST e base de dados alojada em Railway.",
+      "process": [
+        "Investigação inicial sobre o mercado de apostas e necessidades dos utilizadores.",
+        "Prototipagem low-fidelity para validação rápida de conceitos e fluxos.",
+        "Testes de usabilidade intermédios para identificar pontos de fricção.",
+        "Prototipagem high-fidelity com refinamento baseado nos resultados dos testes.",
+        "Implementação em React Native com criação de API REST e base de dados em Railway."
+      ],
+      "images": [
+        "src/assets/images/projects/betlearn/betlearncover.png",
+        "src/assets/images/projects/betlearn/betlearn.png",
+        "src/assets/images/projects/betlearn/betlearn_lo.png"
       ]
     }
   },
   {
     "id": "sara",
-    "number": "VIII",
+    "number": "V",
     "season": "2025",
     "title": "SARA",
     "description": "Plataforma centrada no utilizador para simplificar a requisição de equipamento audiovisual para estudantes e docentes, e fluxos de inventário para administradores.",
@@ -204,8 +128,112 @@
     }
   },
   {
-    "id": "top-indian-movies",
+    "id": "planetarium-pursuit",
+    "number": "VI",
+    "season": "2023",
+    "title": "Planetarium Pursuit",
+    "description": "Plataforma narrativa interativa comissionada pelo Planetário do Porto para criar e publicar cenários educativos baseados em histórias.",
+    "tags": ["UX/UI", "Gamificação", "Visual", "PHP", "MySQL", "JavaScript"],
+    "cardBg": "#BCA98D",
+    "detail": {
+      "subtitle": "Storytelling e interação educativa",
+      "fullDescription": "Os administradores podem construir cenários narrativos com personagens, objetos e fundos, criando experiências educativas semelhantes a jogos para os visitantes.",
+      "process": [
+        "PHP gere a criação de cenários, interações dos utilizadores e renderização de conteúdo dinâmico.",
+        "MySQL armazena histórias, assets e metadados para recuperação rápida durante a interação.",
+        "JavaScript suporta interações front-end como arrastar-e-soltar e colocação de objetos."
+      ],
+      "images": [
+        "src/assets/images/projects/planetarium_pursuit/PlanetariumCover.png",
+        "src/assets/images/projects/planetarium_pursuit/PlanetariumFerramenta.png",
+        "src/assets/images/projects/planetarium_pursuit/PlanetariumPursuit.png",
+        "src/assets/images/projects/planetarium_pursuit/planetarium.jpg",
+        "src/assets/images/projects/planetarium_pursuit/planetariumMockup.png"
+      ]
+    }
+  },
+  {
+    "id": "chronos",
+    "number": "VII",
+    "season": "2023",
+    "title": "Chronos",
+    "description": "Chronos retrata a evolução do sistema solar, desde o Big Bang até à exploração espacial humana, como uma linha temporal educativa e interativa.",
+    "tags": ["JavaScript", "Interativo", "SPA"],
+    "cardBg": "#D4C4A8",
+    "detail": {
+      "subtitle": "História interativa do sistema solar",
+      "fullDescription": "Chronos é uma plataforma interativa que apresenta marcos importantes da história do sistema solar de forma visual, educativa e imersiva.",
+      "process": [
+        "JavaScript foi usado para construir animações interativas e scroll animado, incluindo transições dinâmicas de tamanho e mudanças entre estados claro/escuro.",
+        "Figma apoiou o design e prototipagem da narrativa visual e cenas animadas.",
+        "Bootstrap foi usado para garantir layouts responsivos e consistência entre dispositivos."
+      ],
+      "images": [
+        "src/assets/images/projects/chronos/ChronosCover.png",
+        "src/assets/images/projects/chronos/chronos.jpg",
+        "src/assets/images/projects/chronos/chronos.png"
+      ]
+    }
+  },
+  {
+    "id": "dashboard-rresearch",
+    "number": "VIII",
+    "season": "2026",
+    "title": "Dashboard RResearch",
+    "description": "Dashboard orientado a analise de dados com foco em leitura rapida.",
+    "tags": ["Dashboard", "Data Viz", "UX/UI", "Hasura"],
+    "cardBg": "#C8B89A",
+    "detail": {
+      "subtitle": "Leitura de dados e decisao",
+      "fullDescription": "Projeto centrado em visualizacao e organizacao de informacao, com tres vistas principais no conjunto atual de imagens.",
+      "process": [
+        "Definicao dos indicadores e blocos de informacao.",
+        "Desenho da hierarquia visual do dashboard.",
+        "Ajustes de contraste, espacamento e legibilidade.",
+        "Implementacao dos componentes e funcionalidades com queries à base de dados da hasura."
+      ],
+      "images": [
+        "src/assets/images/projects/dashboard_rresearch/dash1.png",
+        "src/assets/images/projects/dashboard_rresearch/dash2.png",
+        "src/assets/images/projects/dashboard_rresearch/dash3.png"
+      ]
+    }
+  },
+  {
+    "id": "design-sprint",
     "number": "IX",
+    "season": "2024",
+    "title": "Design Sprint",
+    "description": "Processo completo de sprint: pesquisa, ideacao, prototipo e testes.",
+    "tags": ["Design Sprint", "UX", "Prototipagem"],
+    "cardBg": "#BFAA8A",
+    "detail": {
+      "subtitle": "Do problema ao prototipo",
+      "fullDescription": "Colecao de artefactos de sprint incluindo entrevistas, user journey, sketching, prototipos e validacao.",
+      "process": [
+        "Mapeamento do problema e formulacao de How Might We.",
+        "Sintese da pesquisa com user journey e insights.",
+        "Criacao de prototipos low fidelity.",
+        "Iteracao com base em testes e feedback.",
+        "Criação de prototipos high fidelity"
+      ],
+      "images": [
+        "src/assets/images/projects/design_sprint/coverBlog2.png",
+        "src/assets/images/projects/design_sprint/howMightWe.png",
+        "src/assets/images/projects/design_sprint/planeamento.png",
+        "src/assets/images/projects/design_sprint/prototipoHi.png",
+        "src/assets/images/projects/design_sprint/prototipoLo.png",
+        "src/assets/images/projects/design_sprint/sketch.png",
+        "src/assets/images/projects/design_sprint/userJourney.png",
+        "src/assets/images/projects/design_sprint/vitoria.jpg"
+      ]
+    }
+  },
+  
+  
+  {
+    "id": "top-indian-movies",
+    "number": "X",
     "season": "2025",
     "title": "Top Indian Movies",
     "description": "Plataforma de base de dados de filmes inspirada no IMDb, construída com PHP e MySQL, com classificações, favoritos e ferramentas de gestão administrativa.",
@@ -228,51 +256,28 @@
     }
   },
   {
-    "id": "betlearn",
-    "number": "X",
-    "season": "2025",
-    "title": "BetLearn",
-    "description": "Aplicação mobile educativa que ensina os utilizadores a apostar de forma informada, simulando cenários reais do mundo desportivo.",
-    "tags": ["React Native", "UX/UI", "REST API", "Railway"],
-    "cardBg": "#C4B89E",
-    "detail": {
-      "subtitle": "Aprender a apostar com responsabilidade",
-      "fullDescription": "BetLearn é uma aplicação mobile que aproxima os utilizadores do universo das apostas desportivas de forma educativa, simulando cenários o mais próximos possível da realidade. O projeto passou por investigação, prototipagem lo-fi e hi-fi, testes de usabilidade para refinamento, e implementação final com React Native, API REST e base de dados alojada em Railway.",
-      "process": [
-        "Investigação inicial sobre o mercado de apostas e necessidades dos utilizadores.",
-        "Prototipagem low-fidelity para validação rápida de conceitos e fluxos.",
-        "Testes de usabilidade intermédios para identificar pontos de fricção.",
-        "Prototipagem high-fidelity com refinamento baseado nos resultados dos testes.",
-        "Implementação em React Native com criação de API REST e base de dados em Railway."
-      ],
-      "images": [
-        "src/assets/images/projects/betlearn/betlearncover.png",
-        "src/assets/images/projects/betlearn/betlearn.png",
-        "src/assets/images/projects/betlearn/betlearn_lo.png"
-      ]
-    }
-  },
-  {
-    "id": "ser-mais",
+    "id": "oposti",
     "number": "XI",
-    "season": "2025",
-    "title": "Ser+",
-    "description": "Projeto Ser Mais com foco na divulgação das atividades que ocorrem na Universidade de Aveiro fora do contexto das aulas.",
-    "tags": ["UI/UX", "UX Research"],
-    "cardBg": "#C7B59C",
+    "season": "2022",
+    "title": "Opposti",
+    "description": "Protótipo de alta fidelidade em Affinity Design para um café e gelataria moderna, estendendo a experiência na loja para encomendas digitais e registo em workshops.",
+    "tags": ["Produto Digital", "Marca", "UI"],
+    "cardBg": "#D2C5AE",
     "detail": {
-      "subtitle": "Direção visual e conceito da marca",
-      "fullDescription": "Projeto de direção visual e conceito para a marca Ser+, com foco na comunicação das atividades culturais e de lazer da Universidade de Aveiro, com reconhecimento de quem nelas participa.",
+      "subtitle": "Extensão digital da experiência de café",
+      "fullDescription": "A plataforma foi desenhada para suportar encomendas online e registo em workshops, preservando o caráter do espaço físico através de uma interface limpa e intuitiva.",
       "process": [
-        "Análise de contexto e objetivos dos stakeholders.",
-        "Construção do conceito da aplicação.",
-        "Aplicação do conceito em formato digital.",
-        "Criação de protótipos de alta fidelidade.",
-        "Investigação junto dos utilizadores."
+        "Fluxo de encomendas online permite aos utilizadores navegar no menu e encomendar café e gelados rapidamente.",
+        "Registo em workshops permite aos utilizadores inscreverem-se em workshops de café e culinária presenciais.",
+        "A UI foi desenhada para navegação clara e ações sem fricção desde a descoberta até ao checkout."
       ],
       "images": [
-        "src/assets/images/projects/ser_mais/ser+.png"
+        "src/assets/images/projects/oposti/OpostiCover.png",
+        "src/assets/images/projects/oposti/OpostiIphone.png",
+        "src/assets/images/projects/oposti/oposti.jpg"
       ]
     }
   }
+  
+  
 ]
